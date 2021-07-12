@@ -1,0 +1,35 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=Circulo Rojo] (0) at (-6, 0) {s};
+		\node [style=Circulo Rojo] (1) at (0, 6) {a};
+		\node [style=Circulo Rojo] (2) at (0, 0) {b};
+		\node [style=Circulo] (3) at (0, -6) {c};
+		\node [style=Circulo Rojo] (4) at (6, 3) {d};
+		\node [style=Circulo] (5) at (6, -3) {f};
+		\node [style=Circulo Rojo] (6) at (12, 0) {t};
+		\node [style=none] (7) at (-3.5, 3.5) {0/2};
+		\node [style=none] (8) at (-2.5, 0.5) {7/10};
+		\node [style=none] (9) at (-3.5, -3.5) {0/2};
+		\node [style=none] (10) at (-1.25, 2.75) {0/2};
+		\node [style=none] (11) at (-1.25, -2.25) {4/5};
+		\node [style=none] (12) at (1.5, 2.75) {3/10};
+		\node [style=none] (13) at (1.25, -2.25) {0/1};
+		\node [style=none] (14) at (4, -5) {4/4};
+		\node [style=none] (15) at (4, 5) {3/10};
+		\node [style=none] (16) at (10, 2) {3/3};
+		\node [style=none] (17) at (10, -2) {4/11};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=Flecha] (0) to (1);
+		\draw [style=Flecha] (0) to (2);
+		\draw [style=Flecha] (0) to (3);
+		\draw [style=Flecha] (1) to (4);
+		\draw [style=Flecha] (4) to (6);
+		\draw [style=Flecha] (3) to (5);
+		\draw [style=Flecha] (5) to (6);
+		\draw [style=Flecha, bend right=15] (1) to (2);
+		\draw [style=Flecha, bend right=15] (2) to (3);
+		\draw [style=Flecha, bend right=15] (2) to (1);
+		\draw [style=Flecha, bend right=15] (3) to (2);
+	\end{pgfonlayer}
+\end{tikzpicture}

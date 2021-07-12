@@ -1,0 +1,74 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-9, 3) {};
+		\node [style=none] (1) at (-9, -3) {};
+		\node [style=none] (2) at (-3, 3) {};
+		\node [style=none] (3) at (-3, -3) {};
+		\node [style=none] (4) at (-9, 3.5) {S};
+		\node [style=none] (5) at (-3, 3.5) {T};
+		\node [style=Espacio] (6) at (-9, 1) {s};
+		\node [style=Espacio] (7) at (-9, 0) {a};
+		\node [style=Espacio] (8) at (-9, -2) {b};
+		\node [style=Espacio] (9) at (-9, -1) {c};
+		\node [style=Espacio] (10) at (-9, 2) {d};
+		\node [style=Espacio] (11) at (-3, -1) {f};
+		\node [style=Espacio] (12) at (-3, 1) {t};
+		\node [style=none] (13) at (-6, 2) {3/3};
+		\node [style=none] (14) at (-6, -1.5) {4/4};
+		\node [style=Circulo Verde] (15) at (2, 0) {s};
+		\node [style=Circulo Verde] (16) at (8, 6) {a};
+		\node [style=Circulo Verde] (17) at (8, 0) {b};
+		\node [style=Circulo Verde] (18) at (8, -6) {c};
+		\node [style=Circulo Verde] (19) at (14, 3) {d};
+		\node [style=Circulo Rojo] (20) at (14, -3) {f};
+		\node [style=Circulo Rojo] (21) at (20, 0) {t};
+		\node [style=none] (22) at (4.5, 3.5) {2/2};
+		\node [style=none] (23) at (5.5, 0.5) {10/10};
+		\node [style=none] (24) at (4.5, -3.5) {1/2};
+		\node [style=none] (25) at (6.75, 2.75) {0/2};
+		\node [style=none] (26) at (6.75, -2.25) {4/5};
+		\node [style=none] (27) at (9.5, 2.75) {7/10};
+		\node [style=none] (28) at (9.25, -2.25) {1/1};
+		\node [style=none] (29) at (12, -5) {4/4};
+		\node [style=none] (30) at (12, 5) {9/10};
+		\node [style=none] (31) at (18, 2) {3/3};
+		\node [style=none] (32) at (18, -2) {10/11};
+		\node [style=none] (33) at (13.25, 0) {6/6};
+		\node [style=none] (34) at (17, 3) {};
+		\node [style=none] (35) at (9, -7) {};
+		\node [style=none] (36) at (-6.5, 0) {6/6};
+		\node [style=none] (37) at (-6, 5) {Corte:};
+		\node [style=none] (38) at (-6, -5) {Flujo: 13};
+		\node [style=none] (39) at (-8, -4) {};
+		\node [style=none] (40) at (-4, -4) {};
+		\node [style=none] (41) at (-8, -6) {};
+		\node [style=none] (42) at (-4, -6) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=Verde, bend right=90, looseness=0.75] (0.center) to (1.center);
+		\draw [style=Verde, bend left=90, looseness=0.75] (0.center) to (1.center);
+		\draw [style=Rojo, bend right=90, looseness=0.75] (2.center) to (3.center);
+		\draw [style=Rojo, bend left=90, looseness=0.75] (2.center) to (3.center);
+		\draw [style=Flecha] (10) to (12);
+		\draw [style=Flecha] (9) to (11);
+		\draw [style=Flecha] (15) to (16);
+		\draw [style=Flecha] (15) to (17);
+		\draw [style=Flecha] (15) to (18);
+		\draw [style=Flecha] (16) to (19);
+		\draw [style=Flecha] (19) to (21);
+		\draw [style=Flecha] (18) to (20);
+		\draw [style=Flecha] (20) to (21);
+		\draw [style=Flecha, bend right=15] (16) to (17);
+		\draw [style=Flecha, bend right=15] (17) to (18);
+		\draw [style=Flecha, bend right=15] (17) to (16);
+		\draw [style=Flecha, bend right=15] (18) to (17);
+		\draw [style=Flecha] (19) to (20);
+		\draw [style=Rojo Discont] (34.center) to (35.center);
+		\draw [style=Flecha] (10) to (11);
+		\draw (41.center)
+			 to (39.center)
+			 to (40.center)
+			 to (42.center)
+			 to cycle;
+	\end{pgfonlayer}
+\end{tikzpicture}

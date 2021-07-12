@@ -1,0 +1,158 @@
+\documentclass[legalpaper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish]{babel}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{geometry}
+\usepackage{fullpage}
+\usepackage{fancybox}
+
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{minipage}[t]{0.6\textwidth}
+
+{\LARGE \textbf{INF152} Estructuras Discretas}
+
+{\large Profesores: R. Astudillo -- M. Bugueño}
+
+Universidad T\'ecnica Federico Santa Mar\'{\i}a
+
+Departamento de Inform\'atica -- Abril 20, 2020.
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+%RELLENE CON SUS DATOS PERSONALES:
+\textbf{Nombre}: Maximiliano Sepúlveda\\[0.3cm]
+\textbf{Rol}: 201973536-5 \textbf{Paralelo}: 200
+\end{minipage}
+
+\vspace{0.8cm}
+
+{\Large Certamen 1 -- Pregunta 1}
+
+\vspace{0.4cm}
+
+\textbf{Esta evaluación tiene como máximo 25 puntos del C1}.
+
+\textbf{Nota importante}: en esta evaluación las proposiciones y predicados no pueden ser compuestos, es decir, no pueden incluir en su definición ni operadores lógicos ni cuantificadores.
+
+
+\begin{enumerate}[a)]
+\item Hablando con una amiga, te cuenta una pequeña historia que le pasó en su
+niñez:
+
+\vspace{0.2cm}
+\emph{ ``Mis abuelos tenían una regla en su hogar, la luz de la puerta de su casa iba a estar prendida si y solo si ellos estaban adentro, pues eran muy buenos para ahorrar en esos años. Me encantaba su casa porque tenían una gata muy amorosa. Pero un día esta gatita se perdió, y mis abuelos, preocupados, decidieron ir a buscarla indicando que si la gata no estaba en la casa entonces ellos no volverían hasta encontrarla. Yo en ese entonces me iba caminando al colegio y pasaba frente a la casa de ellos en el camino. Estaba triste por la gata, pero un día de vuelta del colegio vi la luz de la casa prendida y me alegré.''}
+
+\vspace{0.2cm}
+Explique con lenguaje natural por qué vuestra amiga se sintió alegre [\textbf{1pts}]. Formalice las afirmaciones anteriores en lenguaje lógico usando solo proposiciones simples y operadores lógicos [\textbf{6pts}], ademas fundamente su respuesta usando la dicha formalizacion [\textbf{3pts}]. Tome en consideración la nota anterior.
+
+\rule{5cm}{0.4pt}
+
+% %responda aquí la parte a)
+\underline{\textbf{Respuesta:}}
+
+Mi amiga se sintió alegre porque: al ver la luz de la casa encendida, significa que sus abuelos estaban dentro (por la regla que ellos tenían con la luz), y como anteriormente habían mencionado que \textit{``mientras la gata no estaba en la casa, ellos tampoco iban a estar''}, mi amiga concluyó que la gata había vuelto.
+
+\textbf{Formalización:}
+
+Se definen las siguientes proposiciones simples:
+
+\begin{itemize}
+  \item \(p\) : La luz de la casa está encendida.
+  \item \(a\) : Los abuelos están dentro de la casa.
+  \item \(g\) : La gata está en la casa.
+  \item \(h\) : Mi amiga está alegre.
+\end{itemize}
+
+Se tienen 3 frases clave:
+
+\begin{enumerate}[1)]
+
+  \item La regla de los abuelos respecto al ahorro de luz: \\ \textit{``La luz de la casa va a estar encendida \textbf{si y solo si} los abuelos están dentro de la casa''} \\ Es decir: \(\boxed{p \iff a}\)
+
+  \item Cuando los abuelos deciden ir a buscar a la gata: \\ \textit{``\textbf{Si} la gata \textbf{no} esta en la casa, \textbf{entonces} los abuelos \textbf{no} estarán dentro de la casa''} (pues, estarán fuera, buscando a la gata) \\ Es decir: \(\boxed{\lnot g \implies \lnot a}\)
+
+  \item A mi amiga le encantaba la casa de sus abuelos porque la gata estaba dentro, y ahora estaba triste porque ésta se había perdido. Se puede concluir entonces que: \\ \textit{``\textbf{Si} la gata esta en la casa, \textbf{entonces} mi amiga va a estar alegre''} \\ Es decir: \(\boxed{g \implies h}\)
+
+\end{enumerate}
+
+En la proposición 1), por la doble implicancia, es equivalente decir \(p \implies a\).
+\[(p \iff a) \equiv (p \implies a) \land (a \implies p)\]
+
+En la proposición 2), se puede notar que \textbf{es la contrarrecíproca} de \(a \implies g\).
+\[(a \implies g) \equiv (\lnot g \implies \lnot a)\]
+
+Si la luz de la casa está encendida, significa que los abuelos están dentro, y si los abuelos están dentro, significa que encontraron a la gata y ahora está dentro de la casa, y si la gata está dentro de la casa, entonces mi amiga va a estar feliz.
+
+Por lo tanto, por silogismo hipotético \textit{(o transitivdad de la implicancia)}, si mi amiga ve la luz de la casa encendida, entonces ella se va a alegrar.
+\[\shadowbox{\(\displaystyle \Big( (p \implies a) \land (a \implies g) \land (g \implies h) \Big) \implies (p \implies h) \)} \Box\]
+
+\newpage
+
+\item Eres contratado como zoólogo en una isla remota en el sudeste asiático. A tu llegada, tu jefe te entrega una notas de trabajo utilizadas por el zoólogo anterior y que podrían ayudar a aclimatarte en este nuevo trabajo. La nota dice:
+
+\emph{``En esta isla existen animales de 4 patas y animales de 2 patas. Todos los animales de 4 patas son terrestres, pero existen animales de 2 patas aéreos y existen animales de 2 patas terrestres. Los animales aéreos son siempre carnívoros mientras que los animales terrestres son carnívoros o herbívoros. Para todo animal aéreo existe un animal terrestre al cual depreda, pero existe un animal terrestre que depreda a todo animal aéreo.''}
+
+Tomando en consideración la nota al comienzo de esta prueba, formalice los escritos del antiguo zoólogo usando operadores logicos, predicados y cuantificadores [\textbf{10pts}]. Explique la diferencia de depredación de animales aéreos a animales terrestres, versus la de animales terrestres hacia animales aéreos. Muestre cómo se manifiesta esta diferencia en su formalización [\textbf{5pts}].
+
+\rule{5cm}{0.4pt}
+
+% responda aquí la parte b)
+\underline{\textbf{Respuesta:}}
+
+\textbf{Formalización:}
+
+Se define el siguiente conjunto para los predicados:
+\begin{itemize}
+  \item \(x, y\) : animal de la isla
+\end{itemize}
+
+Se definen los siguientes predicados:
+
+\begin{itemize}
+  \item \(Q(x)\) : \(x\) es un animal de 4 patas. \textit{(cuadrúpedo)}
+  \item \(B(x)\) : \(x\) es un animal de 2 patas.\textit{(bípedo)}
+  \item \(T(x)\) : \(x\) es un animal terrestre.
+  \item \(A(x)\) : \(x\) es un animal aéreo.
+  \item \(C(x)\) : \(x\) es un animal carnívoro.
+  \item \(H(x)\) : \(x\) es un animal herbívoro.
+  \item \(D(x, y)\) : el animal \(x\) depreda al animal \(y\).
+\end{itemize}
+
+Se tienen 7 frases claves:
+
+\begin{enumerate}[1)]
+  \item \textit{``\textbf{Existen} animales de 4 patas \textbf{y} animales de 2 patas''} \\ Es decir: \(\boxed{\exists x \, Q(x)}\) y \(\boxed{\exists x \, B(x)}\)
+
+  \item \textit{``\textbf{Todos} los animales de 4 patas \textbf{son} terrestres''} \\ Es decir: \(\boxed{\forall x \, \big(Q(x) \implies T(x)\big)}\)
+
+  \item \textit{``\textbf{Existen} animales de 2 patas que son aéreos \textbf{y} \textbf{existen} animales de dos patas que son terrestres''}. Osea, pueden haber animales de 2 patas que, al elegir uno, podría ser aéreo, o terrestre. \\ Es decir: \(\boxed{\exists x \, \Big( B(x) \implies \big( A(x) \lor T(x) \big) \Big)}\)
+
+  \item \textit{``Los animales aéreos \textbf{son siempre} carnívoros''} \\ Es decir: \(\boxed{\forall x \, \big(A(x) \implies C(x)\big)}\)
+
+  \item \textit{``Los animales terrestres son carnívoros \textbf{o} herbívoros''}. Osea, al tomar un animal terrestre, este puede ser carnívoro o herbívoro. \\ Es decir: \(\boxed{\forall x \, \Big( T(x) \implies \big(C(x) \lor H(x)\big) \Big)}\)
+
+  \item \textit{``\textbf{Para todo} animal aéreo, \textbf{existe} un animal terrestre al cual depreda''} \\ Es decir: \(\boxed{\forall x \exists y \, \Big( \big(A(x) \land T(y)\big) \implies D(x, y) \Big)}\)
+
+  \item \textit{``\textbf{Existe} un animal terrestre que depreda a \textbf{todo} animal aéreo''} \\ Es decir: \(\boxed{\exists x \forall y \, \Big( \big(T(x) \land A(y)\big) \implies D(x, y) \Big)}\)
+\end{enumerate}
+
+La forma de depredación de los animales aéreos a animales terrestres (y viceversa) se diferencia por la forma en \textbf{como \underline{todos} los de un grupo pueden depredar a \underline{al menos uno} del otro grupo}, o al revés, \textbf{\underline{uno} de un grupo puede depredar a \underline{todos} los del otro grupo}.
+
+Viéndolo en lenguaje lógico, esta diferencia se puede notar en el orden de los cuantificadores de las proposiciones 6) y 7): uno dice que para cualquier animal aéreo \(x\), éste depreda a al menos un animal terrestre \(y\). El otro dice que hay un animal terrestre \(x\), que es capaz de depredar a todos los animales aéreos \(y\).
+
+\end{enumerate}
+
+%RECUERDE PONER NOMBRE, ROL Y PARALELO EN EL ENCABEZADO
+\end{document}

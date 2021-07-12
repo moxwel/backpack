@@ -1,0 +1,206 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage[position=bottom]{subfig}
+\usepackage{geometry}
+\usepackage{fullpage}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{fancybox}
+\usepackage{caption}
+%\usepackage[caption=false]{subfig}
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata,patterns,shadows}
+\setlength\parindent{0pt}
+
+\usepackage{tikz}
+%\usetikzlibrary{shapes}
+\usetikzlibrary{arrows,automata}
+
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    % Define arrow style
+    pil/.style={
+           ->,
+           thick,}
+}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{minipage}[t]{0.6\textwidth}
+
+{\LARGE \textbf{INF152} Estructuras Discretas}
+
+{\large Profesores: R. Astudillo -- M. Bugueño}
+
+Universidad Técnica Federico Santa Mar\'{\i}a
+
+Departamento de Informática -- Noviembre 6, 2020.
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+%RELLENE CON SUS DATOS PERSONALES:
+\textbf{Nombre}: Maximiliano Sepúlveda\\[0.3cm]
+\textbf{Rol}: 201973536-5 \textbf{Paralelo}: 200
+\end{minipage}
+
+\vspace{0.8cm}
+
+{\Large Certamen 2 -- Pregunta 2}
+
+\vspace{0.4cm}
+
+\textbf{Esta evaluación tiene como máximo 30 puntos del C2}.
+
+Una conocida cadena de supermercados, USMart, recibe día a día miles de clientes por lo que su personal debe revisar constantemente las múltiples estanterías comprobando que no se agote el stock de los productos ofrecidos. USMart, para abaratar costos, ha decidido utilizar robots vigilantes capaces de recorrer las instalaciones de sus locales enviando alertas cuando se observan determinados eventos en el recorrido. Dichos robots necesitan conocer el mapa de los locales donde deberán moverse para así decidir las rutas a recorrer. Sin embargo, el mapa de los locales de USMart es bastante complejo y extenso. Incluso, algunos caminos no son factibles para un robot (por ejemplo, un robot no puede subir escaleras). \\
+En base a la complejidad del problema, USMart está pensando en contratar un estudiante de Estructuras Discretas para lograr descubrir cuáles son las rutas que deberán seguir los robots para así mantener el stock de todos los estantes de productos en cada departamento de venta (deco-hogar, farmacia y perfumería, despensa, mascotas, entre otros). Considere que sería bastante fácil que un robot terminase dando vueltas en círculos así que la tarea de usted se reduce a diseccionar el mapa estableciendo sectores factibles para los robots y, con ello, entregar los pasillos a recorrer.
+
+\begin{enumerate}[a)]
+\item  En base a lo descrito en el enunciado, un único robot no siempre podrá recorrer toda la sucursal ¿Cuántos robots serían necesarios para explorar todos los departamentos de venta en un mismo local? \textbf{[4 puntos]}
+
+%INDIQUE ACA SU RESPUESTA
+\rule{5cm}{0.4pt}
+
+\underline{\textbf{Respuesta:}}
+
+Teniendo en cuenta las condiciones dadas, un local de USMart puede tener escaleras. Asumiendo que los locales de USMart pueden tener distintos pisos, posiblemente los departamentos de venta puede que también estén separados por piso.
+
+Tampoco sale rentable tener un robot por cada departamento, ya que supuestamente USMart esta invirtiendo para \textit{abaratar costos}.
+
+Teniendo en cuenta que el mayor obstáculo que se pueden encontrar los robots son las escaleras, y además, las escaleras pueden hacer posible que los robots no puedan acceder a una zona completa del local (como el ejemplo de distintos pisos), \textbf{la cantidad de robots necesarios seria la misma que la cantidad de escaleras}. \hfill \(\blacksquare\)
+
+
+\newpage
+
+
+
+
+
+
+
+\item Considere un grafo $G$ en donde los nodos representan los estantes a analizar por los robots y los arcos los pasillos que llevan desde un estante a otro. Como se comenta, USMart no quiere una inspección de stock parcial así que lo último que quiere es algún robot dando vueltas en círculo. Se le solicita a usted diseñar un pseudo--código donde todo par de estantes tenga a lo más, un único camino que los conecte por lo que es imperativo retornar un conjunto de arcos (pasillos) a recorrer por los robots siguiendo las restricciones mencionadas \textbf{[20 puntos]}.
+
+Asuma que tiene las funciones:
+\begin{itemize}
+\item \texttt{G.V()}: Retorna un conjunto (set) con los vértices de \texttt{G}.
+\item \texttt{G.E()}: Retorna un conjunto (set) con los arcos de \texttt{G}.
+\item \texttt{subConex(G,v)}: Retorna la componente conexa a partir de \texttt{v} en \texttt{G}.
+\item Operaciones sobre Contenedores C (listas, colas y conjuntos).
+\begin{itemize}
+\item \texttt{enqueue(C, e)} [agrega \texttt{e} a \texttt{C}],
+\item \texttt{dequeue(C)} [retorna y borra el primer elemento de \texttt{C}],
+\item \texttt{len(C)} [cantidad de elementos de \texttt{C}].
+\end{itemize}
+\end{itemize}
+
+%INDIQUE ACA SU RESPUESTA
+
+\rule{5cm}{0.4pt}
+
+\underline{\textbf{Respuesta:}}
+
+Sea: \(G\) el grafo que representa el mapa del local, \(v\) el vértice de partida
+
+\begin{algorithm}
+  \begin{algorithmic}[1]
+    \STATE{\textbf{procedure} recorrido(\(G, v\))}
+    \STATE{\textbf{variable} \(L\): Grafo conexo a partir de \(v\)}
+    \STATE{\(L \leftarrow\) subConex(\(G, v\))}
+    \STATE{\textbf{variable} \(P\): Conjunto de pasillos (enlaces)}
+    \STATE{\(P \leftarrow\) \(L\).E()}
+    \STATE{\textbf{variable} \(T\): Conjunto de estantes (vertices)}
+    \STATE{\(T \leftarrow\) \(L\).V()}
+    \STATE{\textbf{variable} \(Q\): Queue de vertices}
+    \STATE{\textbf{variable} \(R\): Conjunto de enlaces a retornar}
+    \STATE{enqueue(\(Q, v\))}
+    \WHILE{len(\(Q\)) \(\neq 0\)}
+        \STATE{\(x \leftarrow\) dequeue(\(Q\))}
+        \IF{\(x\) no ha sido visitado}
+            \STATE{Marcar \(x\) como visitado}
+        \ENDIF
+        \WHILE{\(\exists y \in T \mid ( y \text{ adyacente a } x ) \land ( y \text{ no visitado} ) \)}
+            \STATE{enqueue(\(Q, y\))}
+            \STATE{Marcar \(y\) como visitado}
+            \STATE{enqueue(\(R, \{x,y\}\))}
+        \ENDWHILE
+    \ENDWHILE
+    \RETURN{\(R\)}
+  \end{algorithmic}
+\end{algorithm}
+
+Este algoritmo producirá un recorrido a lo ancho en todos los pasillos accesibles para el robot, en el local. Los recorridos a lo ancho siempre generan un árbol, por lo tanto, entre todos los vértices siempre hay solo un camino simple. \hfill \(\blacksquare\)
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+\item Suponiendo que un robot recorre un pasillo (espacio entre dos estantes) en $t$ segundos promedio, ¿Cuánto tiempo tarda un análisis de stock completo (a lo largo de todos los departamentos de venta)? \textbf{[6 puntos]}.
+
+%INDIQUE ACA SU RESPUESTA
+\rule{5cm}{0.4pt}
+
+\underline{\textbf{Respuesta:}}
+
+Considerando que el robot debe avanzar por un pasillo, y eventualmente debe devolverse para poder revisar otros pasillos, eso cuenta dos veces el tiempo \(t\).
+
+El algoritmo anterior, retorna una lista de enlaces \(R\), que va a tener \(\text{len}(R)\) elementos.
+
+Para que el robot recorra todos los pasillos de todos los departamentos, es necesario que todos los enlaces se recorran dos veces, excepto el camino mas largo.
+
+Como el recorrido que va a hacer el robot será equivalente a un árbol, la altura de ese árbol representa el camino mas largo. Por lo tanto, si se tienen \(n\) vértices, y \(h(G)\) representa la altura del árbol \(G\), el tiempo que se demoraría el robot seria:
+
+\[\shadowbox{\(\displaystyle (n-1)-h(G) \)} \blacksquare \]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{enumerate}
+
+%RECUERDE PONER NOMBRE, ROL Y PARALELO EN EL ENCABEZADO
+\end{document}
