@@ -1,0 +1,41 @@
+{
+	data: {},
+	type: "DELETE",
+	url: "ejemplo.txt"
+}
+-----
+{
+	data: {"hola": "lol", "como": 212, "estas": {"wea": "weon", "lo": {"cosa": 1903478}}},
+	type: "POST",
+	url: "ejemplo.txt"
+}
+-----
+{
+	data: {"hola": "lol", "numero": [314, 43124, 43214], "mundo": {"wea": "", "usm": {"que": 1903478, "wena": [234, 321, 321]}}, "nombre": "jaja", "wea": {"hola": 12134}, "nooo": [], "hola": {"lol": 43214321}, "we": 432143},
+	type: "POST",
+	url: "ejemplo.txt"
+}
+-----
+{
+	data: {"nombre": "jaja", "cosa": "lol"},
+	type: "POST",
+	url: "ejemplo.txt"
+}
+-----
+{
+	data: {},
+	type: "GET",
+	url: "ejemplwfewaoe.txt"
+}
+-----
+{
+	data: {"nombre": "jaja"},
+	type: "GET",
+	url: "ejemplo.txt"
+}
+-----
+{
+	data: {"hola": "lol"},
+	type: "DELETE",
+	url: "ejemplo.txt"
+}
