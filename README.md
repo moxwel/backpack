@@ -1,5 +1,7 @@
 # utfsm-backpack
 
-Aquí dejare mis archivos y tareas de la uni.
+Un repositorio lleno de las cosas que hago para la uni, y _tal vez_ volverme un ingeniero informatico.
+
+---
 
 En progreso...
