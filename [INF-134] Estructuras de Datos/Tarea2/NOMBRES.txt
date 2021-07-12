@@ -1,0 +1,48 @@
+==========
+Nombres
+==========
+
+Maximiliano Sepulveda Alvear
+ROL      : 201973536-5
+Paralelo : 201
+
+Problema 1 : Idea general algoritmo
+             Algoritmo de fusion de memoria
+             Algoritmo de alocamiento de memoria
+             Implementacion lista enlazada TDA
+
+Problema 2 : Documentacion
+             Implementacion de ABB TDA
+             Generacion de archivo output
+             Funcion maxValue para encontrar el mayor valor.
+
+==========
+
+Cristopher Fuentes Llanten
+ROL      : 201973598-5
+Paralelo : 201
+
+Problema 1 : Algoritmo de fusion de memoria del cementerio
+             (si quiere saber a que nos referimos, vea al final de 'memTools.c' -n-)
+             Adaptacion lista enlazada (campos byte inicial/byte final)
+             Generacion de archivo output
+
+Problema 2 : Implementacion de ABB TDA
+             Algoritmo de insercion en ABB
+             Algoritmo de eliminacion de nodos de ABB
+             Algoritmo de sucesor
+             Casos de prueba
+
+==========
+
+Giuliana Zanetti
+ROL      : 201973584-5
+Paralelo : 202
+
+Problema 1 : Adaptacion lista enlazada (campos byte inicial/byte final)
+             Documentacion
+
+Problema 2 : Implementacion de ABB TDA
+             Algoritmo de insercion en ABB
+             Algoritmo de eliminacion de nodos de ABB
+             Algoritmo de sucesor

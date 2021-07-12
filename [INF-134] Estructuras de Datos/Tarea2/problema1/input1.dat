@@ -1,0 +1,11 @@
+200
+9
+malloc 20
+malloc 50
+free 1
+malloc 70
+malloc 100
+free 71
+malloc 10
+free 21
+free 1

@@ -1,0 +1,34 @@
+Plan para superar esta tarea:
+
+1. Transformar los archivos de texto en arreglos
+
+2. Para cada prefijo, revisar en todos los strings:
+
+    1. Truncar cada string a la cantidad de letras que tiene el prefijo que se busca.
+
+    2. Si es igual, entonces se agrega a un arreglo para despues retornarlo
+
+3. Guardar el arreglo generado en un archivo
+
+==========
+
+- Como la funcion 'buscar_str' acepta arreglos, y al programa se le ingresa archivos,
+  es necesario tener que transformar esos archivos a arreglos.
+
+- A cada elemento del arreglo de prefijos, se busca en el arreglo de todos los strings.
+
+    - La busqueda de strings depende del tamaño del prefijo: no vale la pena
+      buscar los prefijos que tienen menor cantidad de caracteres de lo que se busca.
+      Tampoco vale la pena buscar los prefijos que tienen mas letras, ya que
+      suponiendo que si poseen el prefijo, todos lo demas tambien lo tendran.
+
+    - Por esa razon, se trunca cada string a la cantidad de caracteres que tiene
+      el prefijo que se busca.
+
+    - Si el string truncado coincide con el prefijo, entones se agrega el string
+      original a un nuevo arreglo para guardarlo.
+
+- El arreglo generado anteriormente contendra todos los strings que tienen al prefijo
+  que se buscó
+
+- Finalmente, hay que transformar ese arreglo generado a un archivo nuevo.
