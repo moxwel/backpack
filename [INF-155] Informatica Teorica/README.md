@@ -6,7 +6,11 @@ Para poder ejecutar JFLAP, se necesita una version de [Java](https://www.java.co
 
 Puedes descargar JFLAP [desde este repositorio](https://github.com/moxwel/utfsm-backpack/raw/main/%5BINF-155%5D%20Informatica%20Teorica/JFLAP.jar).
 
-## Licencia
+Pagina oficial de JFLAP: http://www.jflap.org/
+
+---
+
+# Licencia
 
 ```
 Susan H. Rodger
