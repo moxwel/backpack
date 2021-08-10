@@ -2,7 +2,7 @@
 
 Los archivos `.jff` se deben abrir con JFLAP.
 
-Para poder ejecutar JFLAP, se necesita una version de [Java](https://www.java.com/es/download), o en su defecto, alguna version de OpenJDK.
+Para poder ejecutar JFLAP, se necesita una version de [Java](https://www.java.com/es/download), o en su defecto, alguna version de [OpenJDK](https://jdk.java.net/archive/) (en mi caso, es OpenJDK 15.0.1).
 
 Puedes descargar JFLAP [desde este repositorio](https://github.com/moxwel/utfsm-backpack/raw/main/%5BINF-155%5D%20Informatica%20Teorica/JFLAP.jar).
 
