@@ -25,5 +25,7 @@ Algunas carpetas poseen links a repositorios relacionados.
 
 * [VSCode](https://code.visualstudio.com/)
 * [JFLAP](https://github.com/moxwel/utfsm-backpack/tree/main/%5BINF-155%5D%20Informatica%20Teorica/JFLAP)
+* [MiKTeX](https://miktex.org/download)
+* [TikZiT](https://tikzit.github.io/)
 * [Valgrind](https://valgrind.org/)
 * [Make (for Windows)](https://github.com/CarlosSiles67/Make_3.81)
