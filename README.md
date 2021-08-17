@@ -4,6 +4,8 @@ Un repositorio lleno de las cosas que hago para la uni, y _tal vez_ volverme un 
 
 Algunas carpetas poseen links a repositorios relacionados.
 
+Vease [Malla Interactiva Informatica USM](https://mallas.labcomp.cl/).
+
 ## Orden
 
 1. [[IWI-131] Programacion](https://github.com/moxwel/utfsm-backpack/tree/main/%5BIWI-131%5D%20Programacion)
@@ -24,13 +26,17 @@ Algunas carpetas poseen links a repositorios relacionados.
 # Software de utilidad
 
 * [Git](https://git-scm.com/) *Control de versiones.*
-* [VSCode](https://code.visualstudio.com/)
+* [GitHub Desktop](https://desktop.github.com/) *Administrador de repositorios de GitHub.*
+* [Python](https://www.python.org/downloads/) *Interprete de Python.*
+* [VSCode](https://code.visualstudio.com/) *Editor de texto/codigo terriblemente OP.*
+* [OnlineGDB](https://www.onlinegdb.com/) *Interprete, compilador y depurador online de C, Java, Python, etc.*
 * [MiKTeX](https://miktex.org/download) *LaTeX con plugins auto-instalables.*
 * [TikZiT](https://tikzit.github.io/) *Crea diagramas TikZ con facilidad.*
+* [Overleaf](https://es.overleaf.com/) *Editor LaTeX online.*
 * [JFLAP](https://github.com/moxwel/utfsm-backpack/tree/main/%5BINF-155%5D%20Informatica%20Teorica/JFLAP) *Crea automatas y maquinas de Turing.*
 * [Valgrind](https://valgrind.org/) *Detector de fugas de memoria (y mas).*
 * [OpenJDK](https://jdk.java.net/archive/) *Implementacion de Java de codigo aobierto.*
-* [Racket](https://download.racket-lang.org/) *Conjunto de lenguajes funcionales.*
+* [Racket](https://download.racket-lang.org/) *Conjunto de lenguajes funcionales (Scheme).*
 * [SWI-Prolog](https://www.swi-prolog.org/Download.html) *Implementacion de Prolog.*
-* [Make (for Windows)](https://github.com/CarlosSiles67/Make_3.81)
+* [Make (for Windows)](https://github.com/CarlosSiles67/Make_3.81) *Make para Windows (el de Linux es mejor).*
 * [XAMPP](https://www.apachefriends.org/es/index.html) *Servidor, base de datos, y utilidades para desarrollo web.*
