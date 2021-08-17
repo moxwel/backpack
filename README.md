@@ -29,5 +29,8 @@ Algunas carpetas poseen links a repositorios relacionados.
 * [TikZiT](https://tikzit.github.io/) *Crea diagramas TikZ con facilidad.*
 * [JFLAP](https://github.com/moxwel/utfsm-backpack/tree/main/%5BINF-155%5D%20Informatica%20Teorica/JFLAP) *Crea automatas y maquinas de Turing.*
 * [Valgrind](https://valgrind.org/) *Detector de fugas de memoria (y mas).*
+* [OpenJDK](https://jdk.java.net/archive/) *Implementacion de Java de codigo aobierto.*
+* [Racket](https://download.racket-lang.org/) *Conjunto de lenguajes funcionales.*
+* [SWI-Prolog](https://www.swi-prolog.org/Download.html) *Implementacion de Prolog.*
 * [Make (for Windows)](https://github.com/CarlosSiles67/Make_3.81)
 * [XAMPP](https://www.apachefriends.org/es/index.html) *Servidor, base de datos, y utilidades para desarrollo web.*
