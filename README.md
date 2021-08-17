@@ -20,3 +20,12 @@ Algunas carpetas poseen links a repositorios relacionados.
 * [basics](https://github.com/moxwel/basics)
 * [[IWI-131] utfsm-smoj](https://github.com/moxwel/utfsm-smoj)
 * [[IWG-101] csm](https://github.com/moxwel/csm)
+
+---
+
+# Software relacionado
+
+* VSCode
+* JFLAP
+* [Valgrind](https://valgrind.org/)
+* [Make (for Windows)](https://github.com/CarlosSiles67/Make_3.81)
