@@ -21,8 +21,6 @@ Algunas carpetas poseen links a repositorios relacionados.
 * [[IWI-131] utfsm-smoj](https://github.com/moxwel/utfsm-smoj)
 * [[IWG-101] csm](https://github.com/moxwel/csm)
 
----
-
 # Software relacionado
 
 * VSCode
