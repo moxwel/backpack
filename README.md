@@ -23,6 +23,7 @@ Algunas carpetas poseen links a repositorios relacionados.
 
 # Software relacionado
 
+* [Git](https://git-scm.com/)
 * [VSCode](https://code.visualstudio.com/)
 * [MiKTeX](https://miktex.org/download)
 * [TikZiT](https://tikzit.github.io/)
