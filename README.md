@@ -35,7 +35,7 @@ Vease [Malla Interactiva Informatica USM](https://mallas.labcomp.cl/).
 * [Overleaf](https://es.overleaf.com/) *Editor LaTeX online.*
 * [JFLAP](https://github.com/moxwel/utfsm-backpack/tree/main/%5BINF-155%5D%20Informatica%20Teorica/JFLAP) *Crea automatas y maquinas de Turing.*
 * [Valgrind](https://valgrind.org/) *Detector de fugas de memoria (y mas).*
-* [OpenJDK](https://jdk.java.net/archive/) *Implementacion de Java de codigo aobierto.*
+* [OpenJDK](https://jdk.java.net/archive/) *Implementacion de Java de codigo abierto.*
 * [Racket](https://download.racket-lang.org/) *Conjunto de lenguajes funcionales (Scheme).*
 * [SWI-Prolog](https://www.swi-prolog.org/Download.html) *Implementacion de Prolog.*
 * [Make (for Windows)](https://github.com/CarlosSiles67/Make_3.81) *Make para Windows (el de Linux es mejor).*
