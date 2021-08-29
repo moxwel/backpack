@@ -34,7 +34,7 @@ Vease [Malla Interactiva Informatica USM](https://mallas.labcomp.cl/).
 * [OnlineGDB](https://www.onlinegdb.com/) *Interprete, compilador y depurador online de C, Java, Python, etc.*
 * [MiKTeX](https://miktex.org/download) *LaTeX con plugins auto-instalables.*
 * [TikZiT](https://tikzit.github.io/) *Crea diagramas TikZ con facilidad.*
-* [Strawberry Perl](https://strawberryperl.com/) *Implementacion de Perl para Windows de codigo abierto (necesario para MiKTeX).*
+* [Strawberry Perl](https://strawberryperl.com/) *Implementacion de Perl para Windows de codigo abierto **(necesario para MiKTeX).***
 * [Overleaf](https://es.overleaf.com/) *Editor LaTeX online.*
 * [JFLAP](https://github.com/moxwel/utfsm-backpack/tree/main/%5BINF-155%5D%20Informatica%20Teorica/JFLAP) *Crea automatas y maquinas de Turing.*
 * [Valgrind](https://valgrind.org/) *Detector de fugas de memoria (y mas).*
