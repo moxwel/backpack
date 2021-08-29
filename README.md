@@ -30,6 +30,7 @@ Vease [Malla Interactiva Informatica USM](https://mallas.labcomp.cl/).
 * [Git](https://git-scm.com/) *Control de versiones.*
 * [GitHub Desktop](https://desktop.github.com/) *Administrador de repositorios de GitHub.*
 * [Python](https://www.python.org/downloads/) *Interprete de Python.*
+* [MinGW](https://sourceforge.net/projects/mingw/) *Compilador de C/C++ para Windows.*
 * [VSCode](https://code.visualstudio.com/) *Editor de texto/codigo terriblemente OP.*
 * [OnlineGDB](https://www.onlinegdb.com/) *Interprete, compilador y depurador online de C, Java, Python, etc.*
 * [MiKTeX](https://miktex.org/download) *LaTeX con plugins auto-instalables.*
