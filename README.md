@@ -25,6 +25,8 @@ Vease [Malla Interactiva Informatica USM](https://mallas.labcomp.cl/).
 
 # Software de utilidad
 
+* [WSL](https://ubuntu.com/wsl) *Windows Subsystem for Linux. Aka Ubuntu en Windows sin emulador.*
+* [GWSL](https://opticos.github.io/gwsl/) *Manipular WSL con interfaz grafica.*
 * [Git](https://git-scm.com/) *Control de versiones.*
 * [GitHub Desktop](https://desktop.github.com/) *Administrador de repositorios de GitHub.*
 * [Python](https://www.python.org/downloads/) *Interprete de Python.*
