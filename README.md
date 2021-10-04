@@ -44,3 +44,6 @@ Vease [Malla Interactiva Informatica USM](https://mallas.labcomp.cl/).
 * [SWI-Prolog](https://www.swi-prolog.org/Download.html) *Implementacion de Prolog.*
 * [Make (for Windows)](https://github.com/CarlosSiles67/Make_3.81) *Make para Windows (el de Linux es mejor).*
 * [XAMPP](https://www.apachefriends.org/es/index.html) *Servidor, base de datos, y utilidades para desarrollo web.*
+* [StarUML](https://staruml.io/) *Editor de diagramas UML.*
+* [Oracle Database 18c XE](https://www.oracle.com/database/technologies/xe18c-downloads.html) *Base de datos de Oracle.*
+* [SQL Developer](https://www.oracle.com/tools/downloads/sqldev-downloads.html) *Front-end para administrar bases de datos de Oracle).*
