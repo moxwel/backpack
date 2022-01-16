@@ -14,6 +14,8 @@ Vease [Malla Interactiva Informatica USM](https://mallas.labcomp.cl/).
 4. [[INF-152] Estructuras Discretas](https://github.com/moxwel/utfsm-backpack/tree/main/%5BINF-152%5D%20Estructuras%20Discretas)
 5. [[INF-155] Informatica Teorica](https://github.com/moxwel/utfsm-backpack/tree/main/%5BINF-155%5D%20Informatica%20Teorica)
 6. [[INF-253] Lenguajes de Programacion](https://github.com/moxwel/utfsm-backpack/tree/main/%5BINF-253%5D%20Lenguajes%20de%20Programacion)
+7. [[INF-221] Algoritmos y Complejidad](https://github.com/moxwel/utfsm-backpack/tree/main/%5BINF-221%5D%20Algoritmos%20y%20Complejidad)
+8. [[INF-239] Bases de Datos](https://github.com/moxwel/utfsm-backpack/tree/main/%5BINF-239%5D%20Bases%20de%20Datos)
 
 ---
 
