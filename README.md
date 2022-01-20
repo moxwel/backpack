@@ -30,6 +30,7 @@ Vease [Malla Interactiva Informatica USM](https://mallas.labcomp.cl/).
 * Programacion y desarrollo:
     * [WSL](https://ubuntu.com/wsl) *Windows Subsystem for Linux. Aka Ubuntu en Windows sin emulador.*
     * [GWSL](https://opticos.github.io/gwsl/) *Manipular WSL con interfaz grafica.*
+    * [Oh My Zsh](https://ohmyz.sh/#install) *Shell extensible para Linux.*
     * [Git](https://git-scm.com/) *Control de versiones.*
     * [GitHub Desktop](https://desktop.github.com/) *Administrador de repositorios de GitHub.*
     * [VSCode](https://code.visualstudio.com/) *Editor de texto/codigo terriblemente OP.*
@@ -57,6 +58,7 @@ Vease [Malla Interactiva Informatica USM](https://mallas.labcomp.cl/).
     * [StarUML](https://staruml.io/) *Editor de diagramas UML.*
     * [Oracle Database 18c XE](https://www.oracle.com/database/technologies/xe18c-downloads.html) *Base de datos de Oracle.*
     * [SQL Developer](https://www.oracle.com/tools/downloads/sqldev-downloads.html) *Front-end para administrar bases de datos de Oracle.*
+    * [PostgreSQL](https://www.postgresql.org/) *Base de datos relacional moderno.*
 
 * Etc:
     * [JFLAP](https://github.com/moxwel/utfsm-backpack/tree/main/%5BINF-155%5D%20Informatica%20Teorica/JFLAP) *Crea automatas y maquinas de Turing.*
