@@ -62,3 +62,4 @@ Vease [Malla Interactiva Informatica USM](https://mallas.labcomp.cl/).
 
 * Etc:
     * [JFLAP](https://github.com/moxwel/utfsm-backpack/tree/main/%5BINF-155%5D%20Informatica%20Teorica/JFLAP) *Crea automatas y maquinas de Turing.*
+    * [Diagrams.net](https://app.diagrams.net/) *Crea diagramas online.*
