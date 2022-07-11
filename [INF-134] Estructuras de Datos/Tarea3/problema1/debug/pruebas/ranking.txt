@@ -1,5 +1,0 @@
-789 torta 1 5000
-1234 azucar 3 3100
-852 chocolate 2 2000
-569 manjar 3 1500
-4321 leche 1 990
