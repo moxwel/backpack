@@ -6,19 +6,6 @@ Algunas carpetas poseen links a repositorios relacionados.
 
 Vease [Malla Interactiva Informatica USM](https://mallas.labcomp.cl/).
 
-## Orden
-
-1. [[IWI-131] Programacion](https://github.com/moxwel/utfsm-backpack/tree/main/%5BIWI-131%5D%20Programacion)
-2. [[IWG-101] Introduccion a Ingenieria](https://github.com/moxwel/utfsm-backpack/tree/main/%5BIWG-101%5D%20Introduccion%20a%20Ingenieria)
-3. [[INF-134] Estructuras de Datos](https://github.com/moxwel/utfsm-backpack/tree/main/%5BINF-134%5D%20Estructuras%20de%20Datos)
-4. [[INF-152] Estructuras Discretas](https://github.com/moxwel/utfsm-backpack/tree/main/%5BINF-152%5D%20Estructuras%20Discretas)
-5. [[INF-155] Informatica Teorica](https://github.com/moxwel/utfsm-backpack/tree/main/%5BINF-155%5D%20Informatica%20Teorica)
-6. [[INF-253] Lenguajes de Programacion](https://github.com/moxwel/utfsm-backpack/tree/main/%5BINF-253%5D%20Lenguajes%20de%20Programacion)
-7. [[INF-221] Algoritmos y Complejidad](https://github.com/moxwel/utfsm-backpack/tree/main/%5BINF-221%5D%20Algoritmos%20y%20Complejidad)
-8. [[INF-239] Bases de Datos](https://github.com/moxwel/utfsm-backpack/tree/main/%5BINF-239%5D%20Bases%20de%20Datos)
-
----
-
 # Repositorios relacionados
 
 * [basics](https://github.com/moxwel/basics)
