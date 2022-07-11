@@ -6,13 +6,13 @@ Algunas carpetas poseen links a repositorios relacionados.
 
 Vease [Malla Interactiva Informatica USM](https://mallas.labcomp.cl/).
 
-# Repositorios relacionados
+## Repositorios relacionados
 
 * [basics](https://github.com/moxwel/basics)
 * [[IWI-131] utfsm-smoj](https://github.com/moxwel/utfsm-smoj)
 * [[IWG-101] csm](https://github.com/moxwel/csm)
 
-# Software de utilidad
+## Software de utilidad
 
 * Programacion y desarrollo:
     * [WSL](https://ubuntu.com/wsl) *Windows Subsystem for Linux. Aka Ubuntu en Windows sin emulador.*
