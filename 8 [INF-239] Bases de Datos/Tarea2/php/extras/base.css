@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #4BC3C7;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: lightblue;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #E7A12F;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #E7A12F;
+  color: black;
+
+}
+.topnav a.active:hover {
+  background-color: white;
+  color: black;
+
+}
+
+.topnav b {
+  float: right;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav b:hover {
+  background-color: #E7A12F;
+  color: black;
+}
+
+.topnav c {
+  float: left;
+  color: black;
+  text-align: match-parent ;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav d {
+  float: left;
+  color: black;
+  text-align: match-parent ;
+  padding: 14px 0px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+
+.column {
+  float: left;
+  width: 32%;
+  padding: 10px;
+
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
