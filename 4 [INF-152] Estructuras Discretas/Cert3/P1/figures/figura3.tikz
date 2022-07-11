@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=Circulo] (0) at (-3.75, 0.75) {$A$};
+		\node [style=Circulo] (1) at (1.75, 4.5) {$F$};
+		\node [style=Circulo] (2) at (-0.75, 2) {$B$};
+		\node [style=Circulo] (3) at (-1.25, -0.75) {$C$};
+		\node [style=Circulo] (4) at (3.75, -1.75) {$E$};
+		\node [style=Circulo] (5) at (2, 2.25) {$D$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=Grueso] (0) to (2);
+		\draw [style=Grueso] (1) to (5);
+		\draw [style=Grueso] (5) to (2);
+		\draw [style=Grueso] (4) to (2);
+		\draw [in=180, out=75] (0) to (1);
+		\draw (5) to (4);
+		\draw (4) to (3);
+		\draw (3) to (0);
+		\draw [in=-150, out=-90, looseness=1.25] (0) to (4);
+		\draw [bend left=60] (1) to (4);
+	\end{pgfonlayer}
+\end{tikzpicture}

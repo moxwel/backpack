@@ -1,0 +1,454 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage[position=bottom]{subfig}
+\usepackage{geometry}
+\usepackage{fullpage}
+\usepackage{algorithmic}
+\usepackage{algorithm}
+\usepackage{fancybox}
+
+\setlength\parindent{0pt}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,petri,topaths,shapes,automata}
+\usepackage{tkz-berge}
+
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    % Define arrow style
+    pil/.style={
+           ->,
+           thick,}
+}
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{minipage}[t]{0.6\textwidth}
+
+{\LARGE \textbf{INF152} Estructuras Discretas}
+
+{\large Profesores: R. Astudillo -- M. Bugueño}
+
+Universidad Técnica Federico Santa María
+
+Departamento de Informática -- Octubre 30, 2020.
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+%RELLENE CON SUS DATOS PERSONALES:
+\textbf{Nombre}: Maximiliano Sepúlveda \\[0.3cm]
+\textbf{Rol}: #########-# \textbf{Paralelo}: 200
+\end{minipage}
+
+\vspace{0.8cm}
+
+{\Large Certamen 2 -- Pregunta 1}
+
+\vspace{0.4cm}
+
+\textbf{Esta evaluación tiene como máximo 30 puntos del C2}.
+
+\begin{minipage}[b]{0.24\textwidth} %grafo parque
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+\node (a) at (0.0, 0.0) [circle, scale=0.5, fill=cyan, inner sep = 5pt,label=left:a] {};
+\node (b) at (2.0, 0.0) [circle, scale=0.5, fill=cyan, inner sep = 5pt,label=right:b] {};
+\node (c) at (0.0, -2.0) [circle, scale=0.5, fill=cyan, inner sep = 5pt,label=left:c] {};
+\node (d) at (2.0, -2.0) [circle, scale=0.5, fill=cyan, inner sep = 5pt,label=right:d] {};
+\node (e) at (1.5, -0.5) [circle, scale=0.5, fill=cyan, inner sep = 5pt,label=above:e] {};
+\node (f) at (0.5,-1) [circle, scale=0.5, fill=cyan, inner sep = 5pt,label=left:f] {};
+
+\path (a) edge (c) (a) edge (b) (a) edge (f) (a) edge (e) (b) edge (d)
+(c) edge (d) (d) edge (e) (d) edge (f) (e) edge (f);
+\end{tikzpicture}
+\captionof{figure}{Grafo G1}
+\label{f:grafo1}
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.24\textwidth} %grafo parque
+\begin{center}
+\begin{tikzpicture}[scale=1.5]
+\node (j) at (0.5, -0.5) [circle, scale=0.5, fill=red, inner sep = 5pt,label=below right:j] {};
+\node (c) at (2.0, 0.0) [circle, scale=0.5, fill=red, inner sep = 5pt,label=right:c] {};
+\node (k) at (0.0, -2.0) [circle, scale=0.5, fill=red, inner sep = 5pt,label=left:k] {};
+\node (o) at (1.5, -1.5) [circle, scale=0.5, fill=red, inner sep = 5pt,label=right:o] {};
+\node (r) at (1.5, -0.5) [circle, scale=0.5, fill=red, inner sep = 5pt,label=above:r] {};
+\node (t) at (0.5, -1.5) [circle, scale=0.5, fill=red, inner sep = 5pt,label=left:t] {};
+
+\path (j) edge (k) (j) edge (c) (j) edge (t) (j) edge (r) (c) edge (o)
+(k) edge (o) (o) edge (r) (o) edge (t) (k) edge [bend left=80] (c);
+\end{tikzpicture}
+\captionof{figure}{Grafo G2.}
+\label{f:grafo2}
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.24\textwidth} %grafo parque
+\begin{center}
+\begin{tikzpicture}[scale=1.2]
+\node (a) at (0.0, 0.0) [circle, scale=0.3, fill, inner sep = 5pt] {};
+\node (b) at (2.0, 0.0) [circle, scale=0.3, fill, inner sep = 5pt] {};
+\node (c) at (0, -2) [circle, scale=0.3, fill, inner sep = 5pt] {};
+\node (d) at (2, -2) [circle, scale=0.3, fill, inner sep = 5pt] {};
+\node (e) at (1,-1) [circle, scale=0.3, fill, inner sep =5pt] {};
+
+\path (a) edge (b) (a) edge (c)
+(c) edge (d)
+(b) edge (e) (b) edge (d) (a) edge (e) (c) edge (e) (d) edge (e);
+\end{tikzpicture}
+\captionof{figure}{Grafo G3.}
+\label{f:grafo3}
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.24\textwidth} %grafo parque
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+\node (b) at (3, 1.5) [circle, scale=0.3, fill, inner sep = 5pt] {};
+\node (c) at (0, 3.5) [circle, scale=0.3, fill, inner sep = 5pt] {};
+\node (d) at (-3, 1.5) [circle, scale=0.3, fill, inner sep = 5pt] {};
+\node (e) at (-2,-2.5) [circle, scale=0.3, fill, inner sep = 5pt] {};
+\node (f) at (2,-2.5) [circle, scale=0.3, fill, inner sep = 5pt] {};
+
+\path (b) edge (e) (b) edge (d)
+(c) edge (f) (c) edge (e) (d) edge (b) (d) edge (f);
+\end{tikzpicture}
+\captionof{figure}{Grafo G4.}
+\label{f:grafo4}
+\end{center}
+\end{minipage}
+
+\begin{enumerate}[a)]
+\item Considerando los grafos de las Figuras \ref{f:grafo1} y \ref{f:grafo2}, demuestre que ambas arquitecturas son isomorfas. Denote mapeo entre grafos \textbf{a nivel de nodos como a nivel de arcos} justificando debidamente. \textbf{[15 puntos]}
+
+%INDIQUE ACA SU RESPUESTA
+\rule{5cm}{0.4pt}
+
+\underline{\textbf{Respuesta:}}
+
+Para demostrar que los grafos $G1$ y $G2$ son isomorfos, es necesario ver las equivalencias de grados de los vértices de cada uno. Para evitar confusiones, se denotara $c_1$ para el vértice $c$ del grafo $G1$, y $c_2$ para el vértice $c$ del grafo $G2$.
+
+A continuación, se revisara el isomorfismo a nivel de vértices, para ello, se va a revisar los grados de los grafos:
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{| c | c || c | c |}
+    \hline
+    $G1$ & Grado & $G2$ & Grado \\
+    \hline
+    \hline
+    $a$   & \textbf{4} & $c_2$ & 3\\
+    $b$   & 2 & $k$   & 3\\
+    $c_1$ & 2 & $t$   & 2\\
+    $d$   & \textbf{4} & $j$   & \textbf{4}\\
+    $e$   & 3 & $r$   & 2\\
+    $f$   & 3 & $o$   & \textbf{4}\\
+    \hline
+  \end{tabular}
+\end{table}
+
+Se puede notar que si hay una relación entre los grados de cada vértice (en ambos grafos hay 2 vertices de grado 4, hay 2 vertices de grado 3 y 2 vertices de grado 2), por lo tanto, es posible que los grafos si sean isomorfos. A continuación, se va a definir una función $\phi$ que va a \textit{mapear} los vértices de $G1$ a $G2$:
+\[\shadowbox{\(\displaystyle \phi (a) = j \qquad \phi (b) = r \qquad\phi (c_1) = t \qquad\phi (d) = o \qquad\phi (e) = c_2 \qquad\phi (f) = k \)}\]
+Podemos notar que $\phi$ es biyectiva, por lo tanto, si posee inversa:
+\[\shadowbox{\(\displaystyle \phi ^ {-1} (j) = a \quad \phi ^ {-1} (r) = b \quad \phi ^ {-1} (t) = c_1 \quad \phi ^ {-1} (o) = d \quad \phi ^ {-1} (c_2) = e \quad \phi ^ {-1} (k) = f \quad \)}\]
+
+\newpage
+
+Ahora, para ver el isomorfismo a nivel de arcos, puede ser útil revisar su \textbf{matriz de adyacencia}:
+
+\vspace{1em}
+
+\begin{minipage}{0.5\textwidth}
+  \begin{center}
+    \begin{tabular}{ r | c c c c c c}
+      $G1$ & $a$ & $b$ & $c_1$ & $d$ & $e$ & $f$ \\
+      \hline
+      $a$   &0&\textbf{1}&\textbf{1}&0&\textbf{1}&\textbf{1}\\
+      $b$   &\textbf{1}&0&0&\textbf{1}&0&0 \\
+      $c_1$ &\textbf{1}&0&0&\textbf{1}&0&0 \\
+      $d$   &0&\textbf{1}&\textbf{1}&0&\textbf{1}&\textbf{1} \\
+      $e$   &\textbf{1}&0&0&\textbf{1}&0&\textbf{1} \\
+      $f$   &\textbf{1}&0&0&\textbf{1}&\textbf{1}&0 \\
+    \end{tabular}
+  \end{center}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+  \begin{center}
+    \begin{tabular}{ r | c c c c c c}
+      $G2$ & $j$ & $r$ & $t$ & $o$ & $c_2$ & $k$ \\
+      \hline
+      $j$   &0&\textbf{1}&\textbf{1}&0&\textbf{1}&\textbf{1}\\
+      $r$   &\textbf{1}&0&0&\textbf{1}&0&0 \\
+      $t$ &\textbf{1}&0&0&\textbf{1}&0&0 \\
+      $o$   &0&\textbf{1}&\textbf{1}&0&\textbf{1}&\textbf{1} \\
+      $c_2$   &\textbf{1}&0&0&\textbf{1}&0&\textbf{1} \\
+      $k$   &\textbf{1}&0&0&\textbf{1}&\textbf{1}&0 \\
+    \end{tabular}
+  \end{center}
+\end{minipage}
+
+\vspace{1em}
+
+Podemos notar a simple vista que ambos poseen los arcos distribuidos de la misma forma.
+
+$\therefore$ Los grafos $G1$ y $G2$ son isomorfos. \hfill \(\blacksquare\)
+
+\vspace{4cm}
+
+\item Considerando los grafos de las Figuras \ref{f:grafo3} y \ref{f:grafo4}, demuestre o refute que los dibujos se pueden realizar sin levantar el lápiz ni doblar la hoja ni repetir trazos. \textbf{[8 puntos]}.
+
+%INDIQUE ACA SU RESPUESTA
+\rule{5cm}{0.4pt}
+
+\underline{\textbf{Respuesta:}}
+
+Para que un grafo pueda dibujarse sin levantar el lápiz ni repetir trazos, éste debe poseer al menos un \textbf{camino de Euler} o un \textbf{circuito de Euler}.
+
+Para que un grafo posea un camino de Euler, éste debe poseer \textbf{exactamente dos vertices de grado impar}. Para que sea un circuito de Euler, éste debe poseer \textbf{todos sus vertices con grado par}.
+
+Considerando lo anterior, se puede ver que $G3$ posee mas de 2 vertices con grado impar, y no todos sus vertices son de grado par; es decir, no es ninguna de las dos, no posee ni un camino ni un circuito euleriano.
+
+Ahora si revisamos $G4$, todos sus vertices son de grado par, es decir, que si existe un circuito de Euler, por lo tanto, si se puede dibujar sin levantar el lápiz ni repetir trazos.
+
+$\therefore$ Con las condiciones dadas, $G3$ no se puede dibujar, pero si se puede con $G4$. \hfill \(\blacksquare\)
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+
+\item Para $n \geq 2$ par, ¿Cuál es la cantidad mínima de arcos que deben quitarse de un grafo completo $K_n$ para obtener exactamente dos componentes conexas con $\frac{n}{2}$ vértices cada una? Escriba dicha cantidad como una función de $n$. \textbf{[7 puntos]}.
+
+%INDIQUE ACA SU RESPUESTA
+\rule{5cm}{0.4pt}
+
+\underline{\textbf{Respuesta:}}
+
+Como estamos hablando de grafos completos, las componentes conexas que se pueden formar al eliminar \textbf{la minima cantidad de arcos} también deberían ser grafos completos, pero con la condición de que sea la mitad de vertices. En otras palabras, séase un grafo completo $K_n$, las dos componentes conexas del grafo completo deberían ser dos grafos $K_{n/2}$.
+
+
+\begin{center}
+  \begin{tikzpicture}[scale=0.5]
+    \node [] at (-1.3, 1.5) {$K_2=$};
+
+    \node (a) at (0, 3) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (b) at (3, 0) [circle, scale=0.3, fill, inner sep = 5pt] {};
+
+    \draw (a) -- (b);
+  \end{tikzpicture}
+  \hspace{2em}
+  \begin{tikzpicture}[scale=0.5]
+    \node (a) at (0, 3) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (b) at (3, 0) [circle, scale=0.3, fill, inner sep = 5pt] {};
+
+    \draw [color=red, dashed] (a) -- (b);
+  \end{tikzpicture}
+  \hspace{2em}
+  \begin{tikzpicture}[scale=0.5]
+    \node (a) at (0, 3) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (b) at (3, 0) [circle, scale=0.3, fill, inner sep = 5pt] {};
+  \end{tikzpicture}
+
+  Se quitó \textbf{1 arco}. Quedaron 2 grafos disjuntos $K_1$.
+\end{center}
+
+\vspace{1em}
+
+\begin{center}
+  \begin{tikzpicture}[scale=0.5]
+    \node [] at (-1.2, 1.5) {$K_4=$};
+
+    \node (a) at (0, 0) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (b) at (3, 0) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (c) at (3, 3) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (d) at (0, 3) [circle, scale=0.3, fill, inner sep = 5pt] {};
+
+    \draw (a) -- (b);
+    \draw (b) -- (c);
+    \draw (c) -- (d);
+    \draw (d) -- (a);
+    \draw (a) -- (c);
+    \draw (d) -- (b);
+  \end{tikzpicture}
+  \hspace{2em}
+  \begin{tikzpicture}[scale=0.5]
+    \node (a) at (0, 0) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (b) at (3, 0) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (c) at (3, 3) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (d) at (0, 3) [circle, scale=0.3, fill, inner sep = 5pt] {};
+
+    \draw [color=red, dashed] (a) -- (b);
+    \draw [color=green] (b) -- (c);
+    \draw [color=red, dashed] (c) -- (d);
+    \draw [color=green] (d) -- (a);
+    \draw [color=red, dashed] (a) -- (c);
+    \draw [color=red, dashed] (d) -- (b);
+  \end{tikzpicture}
+  \hspace{2em}
+  \begin{tikzpicture}[scale=0.5]
+    \node (a) at (0, 0) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (b) at (3, 0) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (c) at (3, 3) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (d) at (0, 3) [circle, scale=0.3, fill, inner sep = 5pt] {};
+
+    %\draw [color=red] (a) -- (b);
+    \draw (b) -- (c);
+    %\draw [color=red] (c) -- (d);
+    \draw (d) -- (a);
+    %\draw [color=red] (a) -- (c);
+    %\draw [color=red] (d) -- (b);
+  \end{tikzpicture}
+
+  Se quitaron \textbf{4 arcos}. Quedaron 2 grafos disjuntos $K_2$.
+\end{center}
+
+\vspace{1em}
+
+\begin{center}
+  \begin{tikzpicture}[scale=0.5]
+    \node [] at (-3.6, 2) {$K_6=$};
+
+    \node (a) at (1, 0) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (b) at (2.3, 2) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (c) at (1, 4) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (d) at (-1, 4) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (e) at (-2.3, 2) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (f) at (-1, 0) [circle, scale=0.3, fill, inner sep = 5pt] {};
+
+    \draw (a) -- (b);
+    \draw (a) -- (c);
+    \draw (a) -- (d);
+    \draw (a) -- (e);
+    \draw (a) -- (f);
+
+    \draw (b) -- (c);
+    \draw (b) -- (d);
+    \draw (b) -- (e);
+    \draw (b) -- (f);
+
+    \draw (c) -- (d);
+    \draw (c) -- (e);
+    \draw (c) -- (f);
+
+    \draw (d) -- (e);
+    \draw (d) -- (f);
+
+    \draw (e) -- (f);
+  \end{tikzpicture}
+  \hspace{2em}
+  \begin{tikzpicture}[scale=0.5]
+    \node (a) at (1, 0) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (b) at (2.3, 2) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (c) at (1, 4) [circle, scale=0.3, fill, inner sep = 5pt] {};
+
+    \node (d) at (-1, 4) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (e) at (-2.3, 2) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (f) at (-1, 0) [circle, scale=0.3, fill, inner sep = 5pt] {};
+
+    \draw [color=green] (a) -- (b);
+    \draw [color=green](a) -- (c);
+    \draw [color=red, dashed] (a) -- (d);
+    \draw [color=red, dashed] (a) -- (e);
+    \draw [color=red, dashed] (a) -- (f);
+
+    \draw [color=green](b) -- (c);
+    \draw [color=red, dashed] (b) -- (d);
+    \draw [color=red, dashed] (b) -- (e);
+    \draw [color=red, dashed] (b) -- (f);
+
+    \draw [color=red, dashed] (c) -- (d);
+    \draw [color=red, dashed] (c) -- (e);
+    \draw [color=red, dashed] (c) -- (f);
+
+    \draw [color=green](d) -- (e);
+    \draw [color=green](d) -- (f);
+
+    \draw [color=green] (e) -- (f);
+  \end{tikzpicture}
+  \hspace{2em}
+  \begin{tikzpicture}[scale=0.5]
+    \node (a) at (1, 0) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (b) at (2.3, 2) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (c) at (1, 4) [circle, scale=0.3, fill, inner sep = 5pt] {};
+
+    \node (d) at (-1, 4) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (e) at (-2.3, 2) [circle, scale=0.3, fill, inner sep = 5pt] {};
+    \node (f) at (-1, 0) [circle, scale=0.3, fill, inner sep = 5pt] {};
+
+    \draw (a) -- (b);
+    \draw (a) -- (c);
+    %\draw [color=red] (a) -- (d);
+    %\draw [color=red] (a) -- (e);
+    %\draw [color=red] (a) -- (f);
+
+    \draw (b) -- (c);
+    %\draw [color=red] (b) -- (d);
+    %\draw [color=red] (b) -- (e);
+    %\draw [color=red] (b) -- (f);
+
+    %\draw [color=red] (c) -- (d);
+    %\draw [color=red] (c) -- (e);
+    %\draw [color=red] (c) -- (f);
+
+    \draw (d) -- (e);
+    \draw (d) -- (f);
+
+    \draw (e) -- (f);
+  \end{tikzpicture}
+
+  Se quitaron \textbf{9 arcos}. Quedaron 2 grafos disjuntos $K_3$.
+\end{center}
+
+De esa forma, sucesivamente, se tiene la siguiente tabla de datos:
+
+\begin{table}[h]
+  \centering
+  \begin{tabular}{| c | c |}
+    \hline
+    $n$ & $f(n)$ \\
+    \hline
+    2 & 1 \\
+    4 & 4 \\
+    6 & 9 \\
+    8 & 16 \\
+    10 & 25 \\
+    $\vdots$ & $\vdots$ \\
+    \hline
+  \end{tabular}
+\end{table}
+
+Se puede notar como la mitad de $n$, al elevarlo al cuadrado da el resultado. Considerando $n$ una cantidad par $\geq 2$ que representa la cantidad de vertices de un grafo completo $K_n$, se tiene que la cantidad de arcos mínimo a eliminar para separar el grafo en dos grafos $K_{n/2}$ esta dada por la función:
+
+\[\shadowbox{\(\displaystyle f(n) = \left( \frac{n}{2} \right)^2 \)}\blacksquare\]
+
+
+
+
+
+\end{enumerate}
+
+%RECUERDE PONER NOMBRE, ROL Y PARALELO EN EL ENCABEZADO
+\end{document}

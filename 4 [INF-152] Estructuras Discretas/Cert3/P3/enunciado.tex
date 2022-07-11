@@ -1,0 +1,202 @@
+\documentclass[letterpaper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage[position=bottom]{subfig}
+\usepackage{geometry}
+\usepackage{fullpage}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{caption}
+% \usepackage[caption=false]{subfig}
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata,patterns,shadows}
+\setlength\parindent{0pt}
+
+\usepackage{tikz}
+%\usetikzlibrary{shapes}
+\usetikzlibrary{arrows,automata}
+
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    % Define arrow style
+    pil/.style={
+           ->,
+           thick,}
+}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{minipage}[t]{0.6\textwidth}
+
+{\LARGE \textbf{INF152} Estructuras Discretas}
+
+{\large Profesores: R. Astudillo -- M. Bugueño}
+
+Universidad T\'ecnica Federico Santa Mar\'{\i}a
+
+Departamento de Inform\'atica -- Diciembre 18, 2020.
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+%RELLENE CON SUS DATOS PERSONALES:
+\textbf{Nombre}: nombre apellido\\[0.3cm]
+\textbf{Rol}: #########-# \textbf{Paralelo}: 0
+\end{minipage}
+
+\vspace{0.8cm}
+
+{\Large Certamen 3 -- Pregunta 3}
+
+\vspace{0.4cm}
+
+\textbf{Esta evaluación tiene como máximo 30 puntos del C3}
+
+\begin{minipage}[b]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[auto, node distance=0.6 cm,semithick]
+    \tikzstyle{every state}=[rectangle,draw,minimum size=0.6cm] %,text=black]
+    \node[state] (0) {$A$};
+    \node[state] (7) [right of=0] {$B$};
+    \node[state] (1) [below of=0] {$D$};
+    \node[state] (2) [left of=1] {$C$};
+    \node[state] (3) [right of=1] {$E$};
+    \node[state] (4) [right of=3] {$F$};
+    \node[state] (6) [below of=1] {$G$};
+    \node[state] (7) [right of=6] {$H$};
+
+    \draw (0,0) circle (0.2cm);
+    \draw (0.6,0) circle (0.2cm);
+    \draw (0,-0.6) circle (-0.2cm);
+    \draw (-0.6,-0.6) circle (0.2cm);
+    \draw (0.6,-0.6) circle (0.2cm);
+    \draw (0.6,-1.2) circle (0.2cm);
+    \draw (1.2,-0.6) circle (0.2cm);
+    \draw (0,-1.2) circle (0.2cm);
+
+    \end{tikzpicture}\\
+    \captionof{figure}{Cartilla.}
+    \label{cartilla}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.48\textwidth}
+    \centering
+    \begin{tikzpicture}[auto, node distance=0.6 cm,semithick]
+    \tikzstyle{every state}=[rectangle,draw,minimum size=0.6cm] %,text=black]
+    \node[state] (0) {$A$};
+    \node[state] (7) [right of=0] {$B$};
+    \node[state] (1) [below of=0] {$D$};
+    \node[state] (2) [left of=1] {$C$};
+    \node[state] (3) [right of=1] {$E$};
+    \node[state] (4) [right of=3] {$F$};
+    \node[state] (6) [below of=1] {$G$};
+    \node[state] (7) [right of=6] {$H$};
+    \node[state] (8) [above of=0] {$I$};
+    \node[state] (9) [left of=0] {$J$};
+
+    \draw (0,0) circle (0.2cm);
+    \draw (0.6,0) circle (0.2cm);
+    \draw (0,-0.6) circle (-0.2cm);
+    \draw (-0.6,-0.6) circle (0.2cm);
+    \draw (0.6,-0.6) circle (0.2cm);
+    \draw (0.6,-1.2) circle (0.2cm);
+    \draw (1.2,-0.6) circle (0.2cm);
+    \draw (0,-1.2) circle (0.2cm);
+    \draw (0,0.6) circle (0.2cm);
+    \draw (-0.6,0) circle (0.2cm);
+
+    \end{tikzpicture}\\
+    \captionof{figure}{Cartilla alternativa.}
+    \label{alternativa}
+\end{minipage}
+
+
+\begin{enumerate}
+\item ¿Recuerda a Marcos, nuestro jugador de The Last Raider en una de las evaluaciones anteriores? Esta vez nuestro amigo desea probar una nueva modalidad del juego que consiste en la utilización de cartillas coloreables que, a través de la asignación de colores, permite identificar a los personajes del juego. Así, una cartilla A y una cartilla B diferenciables identifican a dos jugadores distintos.\\
+A partir de la Figura \ref{cartilla} y aplicando coloración a \textbf{solo dos de las casillas existentes}:
+\begin{enumerate}
+%--------------------------------------------
+    \item Determine la cantidad de permutaciones que definen automorfismo, es decir, $|G|$. Para esto, realice sus análisis tanto para el nodo $B$ como para el nodo $C$. [\textbf{4 puntos}]
+
+    %\textbf{Solución:}
+
+    \item Asumiendo que sólo cuenta con el color rojo, indique cuántos jugadores diferenciables permitiría esta modalidad de The Last Raider. \textbf{Muestre cada una de las configuraciones existentes}. [\textbf{10 puntos}]
+
+    %\textbf{Solución:}
+
+    \item Marcos cree que si se modificase la tarjeta y se utiliza la coloración de casillas con dos colores diferentes (rojo y verde), se podrían obtener nuevas configuraciones que permitan un número de jugadores mayor al del caso previo. Demuestre o refute el pensamiento de Marcos considerando la tarjeta presentada en la Figura \ref{alternativa} y, nuevamente, la coloración de dos casillas. [\textbf{10 puntos}]
+
+    %\textbf{Solución:}
+
+\end{enumerate}
+
+
+%--------------------------------------------
+\item La Figura \ref{original} describe la configuración de un tablero de 9 casillas donde se aprecia claramente que los números contenidos se encuentran desordenados. En cambio, la Figura \ref{final} muestra los dígitos ordenados, leyéndolos de izquierda a derecha y de arriba hacia abajo.
+
+\begin{minipage}[b]{0.48\textwidth}
+\centering
+            \begin{tikzpicture}[auto, node distance=0.6 cm,semithick]
+            \tikzstyle{every state}=[rectangle,draw,minimum size=0.6cm] %,text=black]
+            \node[state] (0) {$2$};
+            \node[state] (7) [right of=0] {$8$};
+            \node[state] (1) [below of=0] {$7$};
+            \node[state] (2) [left of=1] {$4$};
+            \node[state] (3) [right of=1] {$3$};
+            \node[state] (4) [right of=3] {$6$};
+            \node[state] (8) [above of=0] {$9$};
+            \node[state] (9) [left of=0] {$5$};
+            \node[state] (9) [left of=2] {$1$};
+
+            \end{tikzpicture}\\
+            \captionof{figure}{Configuración inicial.}
+            \label{original}
+\centering
+
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.48\textwidth}
+\centering
+            \begin{tikzpicture}[auto, node distance=0.6 cm,semithick]
+            \tikzstyle{every state}=[rectangle,draw,minimum size=0.6cm] %,text=black]
+            \node[state] (0) {$3$};
+            \node[state] (7) [right of=0] {$4$};
+            \node[state] (1) [below of=0] {$7$};
+            \node[state] (2) [left of=1] {$6$};
+            \node[state] (3) [right of=1] {$8$};
+            \node[state] (4) [right of=3] {$9$};
+            \node[state] (8) [above of=0] {$1$};
+            \node[state] (9) [left of=0] {$2$};
+            \node[state] (9) [left of=2] {$5$};
+
+            \end{tikzpicture}\\
+            \captionof{figure}{Configuración final.}
+            \label{final}
+\end{minipage}
+
+\vspace{0.2cm}
+
+\begin{enumerate}
+    \item Considerando que la manipulación del tablero sólo permite intercambiar la primera casilla con otro elemento cualquiera de los niveles inferiores, ¿cree usted que sea posible ordenar los dígitos de la Figura \ref{original} para obtener el orden presentado en la Figura \ref{final}? Justifique paso a paso. [\textbf{6 puntos}]
+
+    %\textbf{Solución}:
+
+
+\end{enumerate}
+
+\end{enumerate}
+%RECUERDE PONER NOMBRE, ROL Y PARALELO EN EL ENCABEZADO
+
+\end{document}

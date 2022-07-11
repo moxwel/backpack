@@ -1,0 +1,462 @@
+\documentclass[legalpaper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage[position=bottom]{subfig}
+\usepackage{geometry}
+\usepackage{fullpage}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage[makeroom]{cancel}
+\usetikzlibrary{arrows,automata,patterns,shadows}
+\setlength\parindent{0pt}
+
+\usepackage{amsmath, amsfonts, amssymb}
+
+\usepackage{tikz}
+%\usetikzlibrary{shapes}
+\usetikzlibrary{arrows,automata}
+
+\tikzset{
+  %Define standard arrow tip
+  >=stealth',
+  % Define arrow style
+  pil/.style={
+           ->,
+           thick,}
+}
+
+% Importar el paquete tikzit.sty
+\usepackage{tikzit}
+
+% Utilizar el archivo de estilos
+\input{styles.tikzstyles}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{minipage}[t]{0.6\textwidth}
+
+{\LARGE \textbf{INF152} Estructuras Discretas}
+
+{\large Profesores: R. Astudillo -- M. Bugueño}
+
+Universidad T\'ecnica Federico Santa Mar\'{\i}a
+
+Departamento de Inform\'atica -- Diciembre 4, 2020.
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+%RELLENE CON SUS DATOS PERSONALES:
+\textbf{Nombre}: Maximiliano Sepúlveda \\[0.3cm]
+\textbf{Rol}: #########-# \textbf{Paralelo}: 200
+\end{minipage}
+
+\vspace{0.8cm}
+
+{\Large Certamen 3 -- Pregunta 1}
+
+\vspace{0.4cm}
+
+\textbf{Esta evaluación tiene como máximo 40 puntos del C3}
+
+
+\begin{enumerate}
+\item \textbf{USMart}\\
+\begin{minipage}[b]{0.44\textwidth}
+En base a las ganancias que ha acumulado desde la implantación de robots para el análisis de stock, USMart está evaluando incorporar un nuevo producto a su catálogo. Sin embargo, debe estudiar cuánto le costaría producir este producto en lugar de contratar a una empresa externa. Para esto, USMart ha recurrido a usted, estudiante de Estructuras Discretas, y así solucionar unas cuantas dudas.\\
+El Cuadro \ref{usmart} muestra las diversas actividades que USMart deberá completar para la producción e implantación del nuevo producto a su catálogo. Para evitar cualquier fuga de información hacia empresas competidoras, la organización ha omitido la descripción de cada una de las tareas y sólo se refiere a ellas de manera alfabética.
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.46\textwidth}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Actividad} & \textbf{Requisito} & \textbf{Duración [día]}   \\ \hline
+A  & --      &  5    \\ \hline
+B  & --      &  9    \\ \hline
+C  & B, D    &  2    \\ \hline
+D  & A       &  4    \\ \hline
+E  & A       &  6    \\ \hline
+F  & C       &  3    \\ \hline
+G  & D       &  5    \\ \hline
+H  & C       &  8    \\ \hline
+I  & E, F    &  2    \\ \hline
+J  & G       &  2    \\ \hline
+K  & H, J    &  1    \\ \hline
+L  & H, I, J &  1    \\ \hline
+\end{tabular}
+\caption{Actividades de línea de producción con sus respectivos requisitos y duración.}
+\label{usmart}
+\end{table}
+\end{minipage}
+
+
+\begin{enumerate}
+%--------------------------------------------
+  \item Dibuje la red que representa la dependencia de tareas descrita en el Cuadro \ref{usmart} [\textbf{5\%}].
+
+  %\textbf{Respuesta:}
+  \rule{5cm}{0.4pt}
+
+  \underline{\textbf{Respuesta:}}
+
+  \ctikzfig{figura1} \hfill \(\blacksquare\)
+
+  \newpage
+
+
+
+
+
+
+
+
+
+  \item Indique \textbf{cuántas y cuáles} son las rutas críticas de la red indicando claramente \textbf{qué significa esto} [\textbf{10\%}] \\
+  Nota: Justifique a partir del cálculo de instante más temprano e instante más tardío de los elementos de la red
+
+  %\textbf{Respuesta:}
+  \rule{5cm}{0.4pt}
+
+  \underline{\textbf{Respuesta:}}
+
+  Calcular los instantes mas tempranos (verde) y mas tardios (rojo) de la red resulta en esto:
+
+  \ctikzfig{figura2}
+
+  Para calcular la holgura, se puede hacer la siguiente tabla:
+
+  \begin{table}[h]
+      \centering
+      \begin{tabular}{| c || c | c |}
+    \hline
+    Actividad & $L(v)-E(u)-w(u,v)$ & Holgura \\
+    \hline \hline
+    \textbf{A}  & $5-0-5$   &  0    \\ \hline
+    \textbf{B}  & $9-0-9$   &  0    \\ \hline
+    \textbf{C}  & $11-9-2$  &  0    \\ \hline
+    \textbf{D}  & $9-5-4$   &  0    \\ \hline
+    \textbf{D*}  & $9-9-0$   &  0    \\ \hline
+    E  & $17-5-6$  &  6    \\ \hline
+    F  & $17-11-3$ &  3    \\ \hline
+    G  & $17-9-5$  &  3    \\ \hline
+    \textbf{H}  & $19-11-8$ &  0    \\ \hline
+    I  & $19-14-2$ &  3    \\ \hline
+    J  & $19-14-2$ &  3    \\ \hline
+    \textbf{HJ*}  & $19-19-0$   &  0    \\ \hline
+    \textbf{K}  & $20-19-1$ &  0    \\ \hline
+    \textbf{L}  & $20-19-1$ &  0    \\
+    \hline
+      \end{tabular}
+  \end{table}
+
+  Existen 4 rutas criticas:\\
+  \begin{center}
+    $B \rightarrow C \rightarrow H \rightarrow K$ \\
+    $B \rightarrow C \rightarrow H \rightarrow HJ* \rightarrow L$\\
+    $A \rightarrow D \rightarrow D* \rightarrow C \rightarrow H \rightarrow K$\\
+    $A \rightarrow D \rightarrow D* \rightarrow C \rightarrow H \rightarrow HJ* \rightarrow L$
+  \end{center}
+
+  Esto significa que existen 4 caminos de produccion que son ``estrictos en tiempo'', es decir, no se pueden retrasar. \hfill \(\blacksquare\)
+
+
+  \vspace{3em}
+
+
+
+  \item USMart considera que el tiempo de producción para su nuevo producto parece ser razonable. Sin embargo, algunos de los operarios de la organización han reportado que las maquinarias encargadas de las tareas $E$ e $I$ presentan fallas técnicas por lo que les tomará 4 días aplicar las reparaciones pertinentes. ¿Qué implicancias tendrá esto para el proceso de producción? [\textbf{5\%}].
+
+  %\textbf{Respuesta}:
+
+  \rule{5cm}{0.4pt}
+
+  \underline{\textbf{Respuesta:}}
+
+  Segun la holgura que se calculó anteriormente, las actividades $E$ e $I$ se pueden retrasar 6 y 3 dias respectivamente antes de comenzar a retrasar todo el proceso de produccion (20 dias).
+
+  Suponiendo que las reparaciones comienzan al mismo tiempo en las maquinas de $E$ e $I$, y que se demorarian 4 dias en la reparacion, no retrasaria la produccion total, pues, para comenzar la actividad $I$, se necesita primero terminar la tarea $E$ y $F$, pero $E$ posee una holgura de 6 dias antes de que esta actividad comience a retrasar todo el proceso. Si $E$ se retrasa solo 4 dias (en el tiempo que es reparado), no se retrasaria el proyecto (y en teoria, $I$ tambien estaria reparado para entonces). \hfill \(\blacksquare\)
+
+
+
+\end{enumerate}
+
+
+\newpage
+
+%--------------------------------------------
+\item \textbf{The Last Raider}\\
+Marcos, Camila y Roberto han acordado descansar de todas las evaluaciones que han tenido durante el semestre por lo que decidieron jugar en línea The Last Raider, un juego de roles donde deberán decifrar diversos enigmas y escrituras de antiguas civilizaciones a lo largo de múltiples sitios arqueológicos para así ir resolviendo ciertas maldiciones que atormentan a los lugareños. \\
+Entre todos los viajes que deben hacer, Marcos deberá iniciar en \textit{Ciudad de los muertos} para así ayudar a Camila, quien lo esperará en \textit{Campamento Ribera}. Sin embargo, Roberto también requiere de la ayuda de Marcos y lo espera en \textit{Campamento Torre en ruinas}. Lamentablemente, las maldiciones y espíritus que rondan cada punto del mapa pueden volverse muy peligrosas con el paso del tiempo por lo que Marcos deberá ayudar al amigo que esté más cerca, pero no sabe quién es.
+
+
+\begin{minipage}[b]{0.38\textwidth}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Nodo} & \textbf{Descripción}   \\ \hline
+A  & Ciudad de los muertos    \\ \hline
+B  & Karnak \\ \hline
+C  & Ciudad de Paititi       \\ \hline
+D  & La senda de los vivos      \\ \hline
+E  & Campamento Ribera     \\ \hline
+F  & Campamento Torre en ruinas   \\ \hline
+\end{tabular}
+\caption{Localidades de The Last Raider.}
+\label{puntos}
+\end{table}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.53\textwidth}
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[-,auto,node distance=1.5cm,semithick]
+\tikzstyle{every state}=[draw,text=black,minimum size=0.3cm]
+%nodos
+\node[state] (b) {$B$};
+\node[state] (f) [above right of=b,  xshift=1cm,  yshift=0.5cm] {$F$};
+\node[state] (d) [below of=f] {$D$};
+\node[state] (e) [below right of=d, yshift=-1cm] {$E$};
+\node[state] (a) [left of=b] {$A$};
+\node[state] (c) [below left of=b, xshift=1cm] {$C$};
+
+\path 	(a) 	edge [bend left]				node {15}(f)
+        edge [bend right=50]				node {15}(e)
+  edge				node {8}(b)
+  edge				node {7}(c)
+		(b)		edge 				node {4}(d)
+  edge				node {3}(e)
+		(c)		edge				node {5}(e)
+		(d)		edge				node {1}(f)
+		        edge				node {3}(e)
+		(e)		edge [bend right=40]				node {2}(f);
+\end{tikzpicture}
+\caption{Mapa de The Last Raider; Toda distancia se muestra en kilómetros.}
+\label{florencia}
+\end{figure}
+\end{minipage}
+
+\vspace{0.2cm}
+
+\begin{enumerate}
+  \item Como se menciona en el enunciado, Marcos debe ayudar a uno de sus amigos pero no sabe quién. Mediante el algoritmo adecuado, obtenga las distancias a recorrer por Marcos hacia sus dos amigos para así decidir quién necesita su ayuda de manera más pronta. \textbf{Indique el recorrido a seguir} [\textbf{10\%}].
+
+  %\textbf{Respuesta}:
+  \rule{5cm}{0.4pt}
+
+  \underline{\textbf{Respuesta:}}
+
+  Utilizando el algoritmo de Dikstra en el nodo $A$, donde Marcos esta ubicado ahora, se tiene lo siguiente: \\
+
+  \begin{center}
+    \begin{tabular}{|c|c|c|}
+      \hline
+      V&$l[x]$&Path\\
+      \hline
+      \textbf{A} & 0 & -- \\
+      $\text{B}$ & $\infty$ & -- \\
+      $\text{C}$ & $\infty$ & -- \\
+      $\text{D}$ & $\infty$ & -- \\
+      $\text{E}$ & $\infty$ & -- \\
+      $\text{F}$ & $\infty$ & -- \\
+      \hline
+    \end{tabular}
+    \quad
+    \begin{tabular}{|c|c|c|}
+      \hline
+      V&$l[x]$&Path\\
+      \hline
+      $\cancel{\text{A}}$ & 0 & -- \\
+      $\text{B}$ & $8$ & A         \\
+      \textbf{C} & $7$ & A         \\
+      $\text{D}$ & $\infty$ & --   \\
+      $\text{E}$ & $15$ & A        \\
+      $\text{F}$ & $15$ & A        \\
+      \hline
+    \end{tabular}
+    \quad
+    \begin{tabular}{|c|c|c|}
+      \hline
+      V&$l[x]$&Path\\
+      \hline
+      $\cancel{\text{A}}$ & 0 & -- \\
+      \textbf{B} & $8$ & A         \\
+      $\cancel{\text{C}}$ & $7$ & A         \\
+      $\text{D}$ & $\infty$ & --   \\
+      $\text{E}$ & $12$ & $A \rightarrow C$        \\
+      $\text{F}$ & $15$ & A        \\
+      \hline
+    \end{tabular}
+    \quad
+    \begin{tabular}{|c|c|c|}
+      \hline
+      V&$l[x]$&Path\\
+      \hline
+      $\cancel{\text{A}}$ & 0 & -- \\
+      $\cancel{\text{B}}$ & $8$ & A         \\
+      $\cancel{\text{C}}$ & $7$ & A         \\
+      $\text{D}$ & $12$ & $A \rightarrow B$   \\
+      \textbf{E} & $11$ & $A \rightarrow B$        \\
+      $\text{F}$ & $15$ & A        \\
+      \hline
+    \end{tabular}
+
+    \begin{tabular}{|c|c|c|}
+      \hline
+      V&$l[x]$&Path\\
+      \hline
+      $\cancel{\text{A}}$ & 0 & -- \\
+      $\cancel{\text{B}}$ & $8$ & A         \\
+      $\cancel{\text{C}}$ & $7$ & A         \\
+      \textbf{D} & $12$ & $A \rightarrow B$   \\
+      $\cancel{\text{E}}$ & $11$ & $A \rightarrow B$        \\
+      $\text{F}$ & $13$ & $A \rightarrow B \rightarrow E$        \\
+      \hline
+    \end{tabular}
+    \quad
+    \begin{tabular}{|c|c|c|}
+      \hline
+      V&$l[x]$&Path\\
+      \hline
+      $\cancel{\text{A}}$ & 0 & -- \\
+      $\cancel{\text{B}}$ & $8$ & A         \\
+      $\cancel{\text{C}}$ & $7$ & A         \\
+      $\cancel{\text{D}}$ & $12$ & $A \rightarrow B$   \\
+      $\cancel{\text{E}}$ & $11$ & $A \rightarrow B$        \\
+      \textbf{F} & $13$ & $A \rightarrow B \rightarrow E$        \\
+      \hline
+    \end{tabular}
+    \quad
+    \begin{tabular}{||c|c|c||}
+      \hline \hline
+      V&$l[x]$&Path\\
+      \hline
+      $\cancel{\text{A}}$ & 0 & -- \\
+      $\cancel{\text{B}}$ & $8$ & A         \\
+      $\cancel{\text{C}}$ & $7$ & A         \\
+      $\cancel{\text{D}}$ & $12$ & $A \rightarrow B$   \\
+      $\cancel{\text{E}}$ & $11$ & $A \rightarrow B$        \\
+      $\cancel{\text{F}}$ & $13$ & $A \rightarrow B \rightarrow E$        \\
+      \hline \hline
+    \end{tabular}
+  \end{center}
+
+  Nos podemos dar cuenta que: entre los nodos $E$ (donde esta Camila) y $F$ (donde esta Roberto), la que esta mas cerca de $A$ (donde esta Marcos) es el nodo $E$. Por lo tanto, Marcos deberia ir a ayudar a Camila siguiendo el camino $A \rightarrow B \rightarrow E$. \hfill \(\blacksquare\)
+
+  \newpage
+
+
+
+
+
+
+  \item Fantástico! Ningún amigo ha perdido el juego. Marcos, Camila y Roberto han resuelto los enigmas de \textit{Ciudad de los muertos}, \textit{Campamento Ribera} y \textit{Campamento Torre en ruinas}. Sin embargo, aún resta descubrir los misterios de los demás puntos del mapa. Para evitar perderse y arriesgar las vidas de los personajes de The Last Raider, Marcos, Camila y Roberto decidieron reunirse en \textit{Ciudad de Paititi}, o bien, en \textit{Karnak}. \\
+  ¿Dónde es conveniente que se reunan estos chicos? Justifique en base a la aplicación del algoritmo adecuado indicando claramente la \textbf{distancia a recorrer y los caminos a seguir} en su respuesta final [\textbf{10\%}].
+
+  %\textbf{Respuesta}:
+  \rule{5cm}{0.4pt}
+
+  \underline{\textbf{Respuesta:}}
+
+  Realizando el algoritmo de Floyd-Warshall se podra apreciar todas las distancias minimas entre todos los nodos. Resultando en la siguiente matriz (a la izquierda la matriz inicial, a la derecha la final):
+
+  \begin{center}
+    \begin{tabular}{|c|cccccc|}
+      \hline
+      $\rightarrow$&A&B&C&D&E&F\\
+      \hline
+      A&0&8&7&$\infty$&15&15 \\
+      B&&0&$\infty$&4&3&$\infty$ \\
+      C&&&0&$\infty$&5&$\infty$ \\
+      D&&&&0&3&1 \\
+      E&&&&&0&2 \\
+      F&&&&&&0 \\
+      \hline
+    \end{tabular}
+    \qquad
+    \begin{tabular}{||c|cccccc||}
+      \hline \hline
+      $\rightarrow$&A&B&C&D&E&F\\
+      \hline
+      A&0&8&7&12&11&13 \\
+      B&&0&8&4&3&5 \\
+      C&&&0&8&5&7 \\
+      D&&&&0&3&1 \\
+      E&&&&&0&2 \\
+      F&&&&&&0 \\
+      \hline \hline
+    \end{tabular}
+  \end{center}
+
+  \textbf{Iteracion 1 (A):}\\
+  $B \rightarrow C = \infty \qquad \implies \qquad B \rightarrow A \rightarrow C = 15$\\
+  $B \rightarrow F = \infty \qquad \implies \qquad B \rightarrow A \rightarrow F = 23$\\
+  $C \rightarrow F = \infty \qquad \implies \qquad C \rightarrow A \rightarrow F = 22$
+
+  \textbf{Iteracion 2 (B):}\\
+  $A \rightarrow D = \infty \qquad \implies \qquad A \rightarrow B \rightarrow D = 12$\\
+  $A \rightarrow E = 15 \qquad \implies \qquad A \rightarrow B \rightarrow E = 11$\\
+  $C \rightarrow D = \infty \qquad \implies \qquad C \rightarrow B \rightarrow D = 19$
+
+  \textbf{Iteracion 3 (C):}\\
+  Sin cambios.
+
+  \textbf{Iteracion 4 (D):}\\
+  $A \rightarrow F = 15 \qquad \implies \qquad A \rightarrow B \rightarrow D \rightarrow F = 13$\\
+  $B \rightarrow A \rightarrow F = 23 \qquad \implies \qquad B \rightarrow D \rightarrow F = 5$\\
+  $C \rightarrow A \rightarrow F = 22 \qquad \implies \qquad C \rightarrow A \rightarrow B \rightarrow D \rightarrow F = 20$
+
+  \textbf{Iteracion 5 (E):}\\
+  $B \rightarrow A \rightarrow C = 15 \qquad \implies \qquad B \rightarrow E \rightarrow C = 8$\\
+  $C \rightarrow B \rightarrow D = 19 \qquad \implies \qquad C \rightarrow E \rightarrow D = 8$\\
+  $\qquad C \rightarrow A \rightarrow B \rightarrow D \rightarrow F = 20 \qquad \implies \qquad C \rightarrow E \rightarrow F = 7$
+
+  \textbf{Iteracion 6 (F):}\\
+  Sin cambios.\\
+
+  Podemos ver ahora los caminos mas cercanos que hay desde los nodos $A$, $E$ y $F$ hacia los nodos $B$ y $C$ (\textit{Karnak} y \textit{Ciudad de Paititi} respectivamente).
+
+  \begin{center}
+    \begin{tabular}{|c|cccccc|}
+      \hline
+      $\rightarrow$&A&B&C&D&E&F\\
+      \hline
+      A&0&\textbf{8}&\textbf{7}&12&11&13 \\
+      B&8&0&8&4&3&5 \\
+      C&17&8&0&8&5&7 \\
+      D&12&4&8&0&3&1 \\
+      E&11&\textbf{3}&\textbf{5}&3&0&2 \\
+      F&13&\textbf{5}&\textbf{7}&1&2&0 \\
+      \hline
+    \end{tabular}
+  \end{center}
+
+  Se puede ver que Marcos (del nodo $A$) esta mas cerca de $C$, pero Camila (nodo $E$) y Roberto (nodo $F$) tienen caminos mas cercanos a $B$, asi que por mayoria, es mas conveniente que los amigos se reunan en \textit{Karnak} (nodo $B$) siguiendo los siguientes caminos:
+
+  \ctikzfig{figura3}\hfill \(\blacksquare\)
+
+  \newpage
+
+
+
+\end{enumerate}
+
+\end{enumerate}
+%RECUERDE PONER NOMBRE, ROL Y PARALELO EN EL ENCABEZADO
+
+\end{document}

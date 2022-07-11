@@ -1,0 +1,178 @@
+\documentclass[legalpaper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[activeacute,spanish]{babel}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{geometry}
+\usepackage{fullpage}
+\usepackage{fancybox}
+\usepackage{centernot}
+
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{minipage}[t]{0.6\textwidth}
+
+{\LARGE \textbf{INF152} Estructuras Discretas}
+
+{\large Profesores: R. Astudillo -- M. Bugueño}
+
+Universidad Técnica Federico Santa Mar\'{\i}a
+
+Departamento de Informática -- Octubre 16, 2020.
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.35\textwidth}
+%RELLENE CON SUS DATOS PERSONALES:
+\textbf{Nombre}: Maximiliano Sepúlveda\\[0.3cm]
+\textbf{Rol}: #########-# \textbf{Paralelo}: 200
+\end{minipage}
+
+\vspace{0.8cm}
+
+{\Large Certamen 1 -- Pregunta 4}
+
+\vspace{0.4cm}
+
+\textbf{Esta evaluación tiene como máximo 25 puntos del C1}.
+
+
+\begin{enumerate}[a)]
+\item Se definen $A, E$ y $P$ como los conjuntos que describen a las asignaturas de la USM, los estudiantes y los profesores de la USM, respectivamente. Además, se definen las relaciones $D, I$ y $S$ como:
+\begin{itemize}
+    \item $D \subseteq P \times A = \{(a, b) ~|~ a$ dicta $b\}$
+    \item $I \subseteq A \times E = \{(a, b) ~|~ a$ es inscrito por $b\}$
+    \item $S \subseteq A \times A = \{(a, b) ~|~ a$ es pre-requisito de $b\}$
+\end{itemize}
+Considerando lo anterior, ¿Cuántas y cuáles son las composiciones (potencias de grado 2) que se pueden encontrar? Descríbalas en lenguaje natural y utilizando notación por comprensión \textbf{[10 pts.]}.
+
+%INDIQUE ACA SU RESPUESTA
+\rule{5cm}{0.4pt}
+
+\underline{\textbf{Respuesta:}}
+
+Como las composiciones de relaciones necesitan que el \textbf{codominio de una} coincida con el \textbf{dominio de la otra}, se pueden armar 3:
+
+\begin{enumerate}[1)]
+    \item Como \(D \subseteq P \times A\) y \(I \subseteq A \times E\) , entonces se puede realizar \(\boxed{I \circ D \subseteq P \times E}\)
+
+    Considerando que la relación $D$ describe los pares ordenados $(a,b)$ donde el profesor $a$ dicta clases de la asignatura $b$ ; y la relación $I$ describe los pares $(a,b)$ donde la asignatura $a$ es inscrito por el estudiante $b$ (en otras palabras, el estudiante $b$ inscribe la asignatura $a$).
+
+    La composición $I \circ D$ por definición, estaría describiendo que; con $a \in P$ , $b \in E$ , $c \in A$; existe una asignatura $c$ tal que un profesor $a$ lo dicta, y a la vez, un alumno $b$ inscribe ese mismo ramo $c$. Por lo tanto, se concluye que ese profesor $a$, al final, le hace clase al alumno $b$.
+
+    \[\shadowbox{\(I \circ D = \{(a,b) \in P \times E \mid \text{El profesor } a \text{ le hace clases al alumno } b\}\)}\blacksquare\]
+
+    \vspace{1 em}
+
+    \item Como \(S \subseteq A \times A\) , entonces se puede realizar \(\boxed{S^2 = S \circ S \subseteq A \times A}\)
+
+    Considerando que la relación $S$ describe los pares ordenados $(a,b)$ donde la asignatura $a$ es pre-requisito de la asignatura $b$ (ej. \textbf{MAT021} es pre-requisito de \textbf{MAT022}).
+
+    La potencia de grado 2 de $S$ estaría describiendo de cierta forma \textit{los pre-requisitos de los pre-requisitos} de una asignatura (ej. \textbf{MAT021} es pre-requisito de \textbf{MAT022}, y a su vez, \textbf{MAT022} es pre-requisito de \textbf{MAT023}). Finalmente, se concluye que de todas formas, los pares ordenados $(a,b)$ de $S \circ S$ siguen describiendo pre-requisitos de asignaturas (\textbf{MAT021} sigue siendo un pre-requisito de \textbf{MAT023}, hay que aprobarlo de todas formas).
+
+    \[\shadowbox{\(S \circ S = \{(a,b) \in A \times A \mid \text{La asignatura } a \text{ es pre-requisito de } b\}\)}\blacksquare\]
+
+    \vspace{1 em}
+
+    \item Como \(D \subseteq P \times A\) y \(S \subseteq A \times A\) , entonces se puede realizar \(\boxed{S \circ D \subseteq P \times A}\)
+
+    Considerando que la relación $D$ describe los pares ordenados $(a,b)$ donde el profesor $a$ dicta clases de la asignatura $b$ ; y la relación $S$ describe los pares ordenados $(a,b)$ donde la asignatura $a$ es pre-requisito de la asignatura $b$.
+
+    La composición $S \circ D$ estaría describiendo los pares $(a,b)$ donde el profesor $a$ dicta una asignatura que es pre-requisito de la asignatura $b$ \footnote{No se me ocurrió otra cosa... Un profesor que dicta una asignatura que es pre-requisito de otra asignatura no necesariamente implica que ese profe también dicte esa asignatura, o que pertenezca al mismo departamento (ej. Profesor ``X'' dicta la asignatura de MAT021; además, MAT021 es pre-requisito de INF152. ¿Cómo esta relacionado el profesor ``X'' con INF152? No necesariamente puede que también haga clases para INF152, o que pertenezcan al mismo departamento, es difícil concluir algo que no sea tan obvio.)}.
+
+    \[\shadowbox{\(S \circ D = \{(a,b) \in P \times A \mid \text{El profesor } a \text{ dicta una asignatura que es pre-requisito de } b\}\)}\blacksquare\]
+
+
+
+\end{enumerate}
+
+
+
+
+
+\newpage
+
+
+
+
+\item Sea $P$ el conjunto de las personas, determine las clases de equivalencia definidas por la relación $R \subseteq P \times P = \{(a, b) ~|~ a$ confía sus secretos a $b\}$ \textbf{[15 pts.]}. \\ \textit{Hint: De ser necesario, indique los cierres correspondientes para cumplir con las propiedades que usted considere.}
+
+%INDIQUE ACA SU RESPUESTA
+
+\rule{5cm}{0.4pt}
+
+\underline{\textbf{Respuesta:}}
+
+Para determinar las \textbf{clases de equivalencia} de la relación $R$, es necesario saber primero si $R$ es una \textbf{relación de equivalencia}.
+
+\begin{itemize}
+    \item \textbf{Reflexividad:} $a$ si puede confiarse sus propios secretos, de todas formas, son sus propios secretos, por lo tanto \textbf{SI} es reflexivo. \(\boxed{\forall a \in A, \, (a,a) \in R}\)
+
+    \vspace{1 em}
+
+    \item \textbf{Simetría:} Si $a$ confía sus secretos a $b$, no necesariamente implica que esa persona $b$ también confíe sus secretos a $a$ (puede que no haya el mismo nivel de confianza). Por lo tanto, \textbf{NO} es simétrico. \(\boxed{\forall a,b \in A, \, \big( (a,b) \in R \centernot \implies (b,a) \in R\big)}\)
+
+    \vspace{1 em}
+
+    \item \textbf{Transitividad:} Si $a$ confía sus secretos a $b$, y a la vez $b$ confía sus secretos a $c$, tampoco implica necesariamente que $a$ confíe sus secretos a $c$ (puede que ni lo conozca). Por lo tanto, \textbf{NO} es transitivo. \(\boxed{\forall a,b,c \in A, \, \Big( \big( (a,b) \in R \land (b,c) \in R \big) \centernot \implies (a,c) \in R \Big)}\)
+\end{itemize}
+
+\(\therefore\) Es necesario aplicar un \textbf{cierre simétrico y transitivo} para recién tener una relación de equivalencia, y de ahí poder buscar clases de equivalencia.
+
+\hfill \(\blacksquare\)
+
+\vspace{2 em}
+
+Para motivos de esta explicación, supondremos que:
+\begin{center}
+    ``\textbf{Las personas que confían sus secretos entre sí son \textit{\underline{amigos}}}''.
+\end{center}
+Al aplicar el cierre a la relación $R$, se cumplirán las siguientes condiciones:
+
+\begin{itemize}
+    \item Cada persona puede confiarse sus propios secretos (reflexividad).
+    \item Cada par de personas que confían sus secretos, lo hacen entre si, es decir, son ``amigos'' (simetría).
+    \item El \textit{amigo} de mi amigo, también será mi \textit{amigo} (transitividad).
+\end{itemize}
+
+Considerando que todos los amigos de mis amigos también serán mis amigos, al final, la clase de equivalencia corresponde al conjunto de todas las personas que son amigos de uno.
+
+\[\boxed{\forall a \in P, \, [a]_R = \{b \in P \mid b \text{ es amigo de }a\}}\]
+
+En cierto sentido, se crea una especie de ``\textbf{circulo social}'': un conjunto donde todas las personas están relacionados entre sí. Cada persona que pertenece a la misma clase de equivalencia son \textit{representantes} de la clase.
+
+\[\boxed{b \in [a]_R \implies b \text{ es representante del circulo de amigos de } a}\]
+
+Y también hay que tener en cuenta que entre todas las personas pueden haber personas que no se relacionan entre si, ni siquiera por los amigos de sus amigos (distinta ciudad, distinto país, etc.).
+
+Por lo tanto, se puede concluir que cada clase de equivalencia distinta, de la relación $R$ (con sus cierres correspondientes), equivalen a \textbf{todos los círculos sociales que existen en el conjunto de todas las personas}.
+
+Tiene sentido porque si unimos todos los círculos sociales que existen, se termina con el conjunto global de todas las personas $P$.
+\[\text{Sea } [a_1]_R \neq [a_2]_R \neq \cdots \neq [a_n]_R \text{ con } a_1, a_2, ..., a_n \in P\]
+\[\shadowbox{\(\displaystyle \bigcup^n_{i=1} [a_i]_R = P\)}\blacksquare\]
+
+Pero intentar intersecar diferentes círculos sociales que no tienen nada en común, termina siendo un conjunto vacío.
+\[\shadowbox{\(\displaystyle a,b \in P, \, ( [a]_R \cap [b]_R = \varnothing ) \implies ((a,b) \notin R) \)} \blacksquare\]
+
+
+
+
+
+
+
+
+
+
+\end{enumerate}
+
+%RECUERDE PONER NOMBRE, ROL Y PARALELO EN EL ENCABEZADO
+\end{document}
