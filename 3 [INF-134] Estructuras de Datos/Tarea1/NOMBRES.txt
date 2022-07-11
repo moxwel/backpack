@@ -1,0 +1,40 @@
+==========
+Nombres
+==========
+
+Maximiliano Sepúlveda
+ROL      : #########-#
+Paralelo : 201
+
+Problema 1 : Funcion para transformar un archivo a un arreglo.
+             Argumentos de programa.
+             Documentacion.
+
+Problema 2 : Funcion para generar clientes.
+             Funcion para leer clientes.
+             Funcion 'actualizarSaldos'
+
+==========
+
+Cristopher Fuentes
+ROL      : #########-#
+Paralelo : 201
+
+Problema 1 : Idea general de solucion (TODO.txt).
+
+Problema 2 : Funcion para leer transacciones.
+             Funcion para generar clientes.
+             Funcion para leer transacciones.
+             Funcion para reemplazar archivo.
+
+==========
+
+Giuliana Zanetti
+ROL      : #########-#
+Paralelo : 202
+
+Problema 1 : Funcion principal 'buscar_str'.
+             Funcion para transformar un arreglo a archivo.
+
+Problema 2 : Funcion para generar clientes.
+             Funcion para leer clientes.

@@ -1,0 +1,24 @@
+50
+21
+malloc 50
+malloc 10
+malloc 5
+free 1
+malloc 20
+malloc 30
+malloc 12
+free 21
+malloc 5
+malloc 2
+malloc 12
+free 1
+free 28
+malloc 5
+malloc 7
+free 21
+malloc 10
+free 1
+malloc 2
+free 13
+free 6
+

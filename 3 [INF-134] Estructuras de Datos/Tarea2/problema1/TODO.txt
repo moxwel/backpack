@@ -1,0 +1,59 @@
+====================
+PLAN PARA SUPERAR LA TAREA
+====================
+- Como se hablan de acciones arbitrarias de memoria, es necesario usar listas enlazadas.
+
+- Cada nodo puede almacenar 2 variables: el byte de inicio y el byte final del bloque.
+En este contexto, un nodo va a representar un bloque de memoria contigua.
+
+- Con estas dos variables, tambien se puede obtener el tamaño del bloque de memoria
+en si. Por ejemplo: 71 140, donde 71 seria el byte donde se inicia el bloque, y
+140 es el ultimo byte que pertenece a este; su tamaño seria 70 bytes.
+
+- Con esto obtenermos una formula: bSize = bEnd - bStrt + 1
+
+Donde...
+bStrt = byte inicial
+bEnd  = byte final
+bSize = tamaño del bloque
+
+De aqui se puede sacar el resto de calculos, por ejemplo, para calcular "cual seria
+el byte final de un bloque dado un byte inicial y su tamaño a ser".
+
+
+====================
+ALGORITMO
+====================
+
+Todo comienza leyendo el archivo. A pesar de tener extension .dat, se puede leer como
+un archivo ASCII (se puede usar fscanf).
+
+El primer pedazo de texto se puede interpretar como un int (se puede usar atoi),
+este va a definir el tamaño maximo 'M' de la memoria.
+
+El primer elemento de la lista de bloques libres sera un unico nodo de la siguiente
+forma: 1 M, donde su tamaño sera M.
+
+Luego se lee el siguiente numero, que define la cantidad de acciones que se van
+a realizar, puede usarse para alguna iteracion de instrucciones segun sea el caso.
+
+Luego se leen las instrucciones, las cuales pueden ser "malloc X" o "free X", con
+'X' refiriendose al tamaño de memoria que se va a alocar (en el caso de malloc),
+ó refiriendose al byte inicial del bloque que se quiere liberar (en el caso de free).
+
+- En el caso de malloc, se compara el tamaño del bloque que se quiere ingresar con
+el tamaño de los bloques en la lista de bloques libres.
+    - Si el tamaño que se quiere ingresar es menor al tamaño de un bloque libre,
+    entonces se ingresa a la lista de ocupados.
+    - Si el tamaño es igual al de un bloque libre, todo el bloque libre se elimina
+    y pasa al ocupado.
+    - Si el tamaño es mayor, no se puede ingresar, y se busca el siguiente bloque
+    libre. Si ya no hay mas, no se puede alocar mas memoria.
+
+- En el caso de free, se compara el byte inicial que se quiere liberar, con los
+bytes iniciales de la lista de ocupados. Si encuentra uno, lo devuelve a la lista
+de libres; si no, entonces no se puede liberar.
+
+Hay un caso especial, en donde dos bloques libres estan contiguos en memoria, por
+ejemplo: 1 20 y 21 50. En esos casos, si el byte inicial de un bloque coincide con
+el byte final de un bloque + 1, entonces se fusionan en un unico bloque libre.

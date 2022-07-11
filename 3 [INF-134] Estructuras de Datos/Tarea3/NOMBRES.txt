@@ -1,0 +1,34 @@
+==========
+Nombres
+==========
+
+Maximiliano Sepúlveda
+ROL      : #########-#
+Paralelo : 201
+
+Problema 1 : Plan de accion
+             Limpieza
+             Tablas de hashing
+             Manejo de archivos
+
+==========
+
+Cristopher Fuentes
+ROL      : #########-#
+Paralelo : 201
+
+Problema 1 : Funcion de hashing
+             Funciones TDA
+             Algoritmo de orden (ineficiente, pero funcional)
+             Casos de prueba
+
+==========
+
+Giuliana Zanetti
+ROL      : #########-#
+Paralelo : 202
+
+Problema 1 : Apoyo moral
+             Funcion de hashing
+             Registro de precios por cliente
+             Casos de prueba

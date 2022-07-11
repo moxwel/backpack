@@ -1,0 +1,34 @@
+Plan para superar esta tarea:
+
+1. Para un cliente...
+
+2. Revisar transacciones que afecten a este:
+
+    1. Si es '+', aumentar saldo
+
+    2. Si es '-', disminuir saldo
+
+    3. Si es '>'...
+
+        1. Si es cuenta de origen, disminuir saldo
+
+        2. Si es cuenta de destino, aumentar saldo
+
+3. Guardar cambios en archivo nuevo
+
+4. Repetir.
+
+==========
+
+- Crear un archivo nuevo para guardar los cambios.
+
+- Recorrer archivo de clientes
+
+- Para cada cliente, recorrer el archivo de transacciones
+
+  - Si el numero de la cuenta del cliente actual es afectado por
+    alguna transaccion, entonces se efectua el cambio.
+
+  - Despues de todos los cambios, se guarda en el archivo nuevo.
+
+- Finalmente, reemplazar el archivo con los cambios al archivo original de clientes.

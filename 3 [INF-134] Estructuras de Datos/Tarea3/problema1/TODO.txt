@@ -1,0 +1,92 @@
+=========
+PLAN DE ACCION
+=========
+
+Cada producto tiene 3 propiedades:
+- Codigo del producto
+- Nombre del producto
+- Precio
+
+Un producto puede tener un descuento si se compra una cierta
+cantidad EXACTA de este que posea una oferta.
+
+Una oferta se considera con 3 propiedades:
+- Codigo del producto
+- Cantidad para aplicar al descuento
+- Descuento en pesos
+
+Una oferta puede aplicarse tantas veces a un producto si
+se posee la condicion de que posea una cantidad EXACTA de productos
+a aplicarse la oferta.
+
+Si una oferta se define a un producto al comprar 3 unidades de este.
+
+Si se compra 7... (# significa producto)
+[###] [###] #
+
+La oferta se aplica a 2 grupos de 3, y uno queda libre.
+
+Hay una relacion con la division y el modulo de la cantidad de
+producto total y la cantidad para aplicar al descuento.
+
+Sean:
+P = Cantidad de productos
+D = Cantidad de producto para aplicar a descuento
+
+* Considerando '/' como division entera (truncado)
+P / D = Cantidad de veces que aplica el descuento
+P % D = Cantidad de productos que no aplican a descuento
+
+---
+
+Si es asi el caso, por ejemplo, se podria definir un producto "Leche"
+que normalmente cuesta $500, pero si se compran 3 unidades, hay un
+descuento de -$300, es decir, en vez de costar $1500, costaria %1200.
+
+Si se compra 7 unidades de Leche...
+
+7 / 3 = 2
+Es decir, el descuento se puede aplicar 2 veces, ya que se forman 2
+grupos de productos de 3 a las que si puede aplicar.
+
+7 % 3 = 1
+Es decir, hay 1 producto que no aplica al descuento. Queda fuera
+del grupo, asi que su precio es normal.
+
+Como hay 2 ofertas, el precio se calcula por grupo:
+1200 * 2 = 2400
+
+Como hay 1 producto sin oferta, su precio no cambia.
+
+El precio total seria: 2400 + 500 = 2900
+
+Forma alternativa:
+Contar el precio como si no hubiera descuento, y al final descontar.
+
+500 * 7 = 3500
+
+-300 * 2 = -600
+
+3500 - 600 = 2900
+
+---
+
+ENTRADAS:
+
+Se ingresan dos archivos binarios, que vendria siendo "el catalogo" de productos
+y ofertas del supermercado, y luego vienen las operaciones de compra de todos
+los clientes.
+
+En los archivos binarios, el primer digito 'N' representa la cantidad de productos
+que hay en este. Como se debe tener un factor de carga de 0.7, se puede usar la formula
+
+N/M = 0.7   =>    N/0.7 = M
+
+'M' sera el total de celdas a hacer para cada tabla de hashing.
+
+Luego, se debe leer un archivo .txt de compras de clientes, y con ese archivo, registrar
+las compras de cada producto.
+
+- Para cada cliente, ir sumando el precio de cada producto a la lista de productos
+totales, si se cuenta la cantidad para una oferta, se suma, y luego inmediatamente se
+resta el dinero a descontar.
