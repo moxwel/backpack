@@ -1,3 +1,3 @@
 # Repositorios relacionados
 
-* [SMOJ USM](https://github.com/moxwel/utfsm-smoj)
+* [[IWI-131] utfsm-smoj](https://github.com/moxwel/utfsm-smoj)
