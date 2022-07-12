@@ -1,18 +1,22 @@
 # backpack
 
-Un repositorio lleno de las cosas que hago para la uni, y *tal vez* volverme un ingeniero informatico.
+Un repositorio lleno de las cosas que hago para la uni y *tal vez* volverme un ingeniero informatico.
 
-Algunas carpetas poseen links a repositorios relacionados.
+Si estudias en la **Universidad Técnica Federico Santa Maria** puede que estos archivos te sirvan de algo.
 
-Vease [Malla Interactiva Informatica USM](https://mallas.labcomp.cl/).
+> Vease [Malla Interactiva Informatica USM](https://mallas.labcomp.cl/).
 
 ## Repositorios relacionados
+
+Algunas carpetas poseen links a repositorios externos relacionados.
 
 * [basics](https://github.com/moxwel/basics)
 * [[IWI-131] utfsm-smoj](https://github.com/moxwel/utfsm-smoj)
 * [[IWG-101] csm](https://github.com/moxwel/csm)
 
 ## Software de utilidad
+
+Aquí hay una lista de programas que he utilizado hasta ahora.
 
 * Programacion y desarrollo:
   * [WSL](https://ubuntu.com/wsl) *Windows Subsystem for Linux. Aka Ubuntu en Windows sin emulador.*
