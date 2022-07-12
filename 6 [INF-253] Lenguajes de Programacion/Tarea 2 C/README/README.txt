@@ -1,6 +1,6 @@
 README
 Maximiliano Sepúlveda
-ROL #########-#
+
 ====================
 
 Este es el Readme principal del programa. La documentacion de la lista enlazada

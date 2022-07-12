@@ -1,6 +1,6 @@
 README
 Maximiliano Sepúlveda
-ROL #########-#
+
 ====================
 
 NOTAS AL MARGEN
