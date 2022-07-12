@@ -9,10 +9,10 @@ NOMBRES
 ==========
 
 - Maximiliano Sepúlveda
-  ROL: #########-#
+
 
 - Cristopher Fuentes
-  ROL: #########-#
+
 
 
 

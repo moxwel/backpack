@@ -1,7 +1,7 @@
 README
 ----------------------
 Maximiliano Sepúlveda
-ROL: #########-#
+
 ----------------------
 
 Por errores de sintaxis que Oracle me alegaba y no supe como lograr solucionarlos a tiempo,
