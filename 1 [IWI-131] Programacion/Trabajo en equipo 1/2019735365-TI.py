@@ -1,6 +1,6 @@
 """
 TRABAJO INDIVIDUAL
-ROL #########-#_#########-#_#########-#
+
 PAR 205
 NOM CristopherFuentes_FelipeMellado_MaximilianoSepulveda
 """
