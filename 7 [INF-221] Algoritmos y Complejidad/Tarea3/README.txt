@@ -8,13 +8,13 @@ NOMBRES
 ==========
 
 - Tomás Vasquez
-  ROL: #########-#
+
 
 - Maximiliano Sepúlveda
-  ROL: #########-#
+
 
 - Cristopher Fuentes
-  ROL: #########-#
+
 
 
 
