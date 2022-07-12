@@ -1,3 +1,3 @@
 # Repositorios relacionados
 
-* [Calendario Santa Maria](https://github.com/moxwel/csm)
+* [[IWG-101] csm](https://github.com/moxwel/csm)
