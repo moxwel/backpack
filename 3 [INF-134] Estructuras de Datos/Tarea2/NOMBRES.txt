@@ -3,7 +3,7 @@ Nombres
 ==========
 
 Maximiliano Sepúlveda
-ROL      : #########-#
+
 Paralelo : 201
 
 Problema 1 : Idea general algoritmo
@@ -19,7 +19,7 @@ Problema 2 : Documentacion
 ==========
 
 Cristopher Fuentes
-ROL      : #########-#
+
 Paralelo : 201
 
 Problema 1 : Algoritmo de fusion de memoria del cementerio
@@ -36,7 +36,7 @@ Problema 2 : Implementacion de ABB TDA
 ==========
 
 Giuliana Zanetti
-ROL      : #########-#
+
 Paralelo : 202
 
 Problema 1 : Adaptacion lista enlazada (campos byte inicial/byte final)

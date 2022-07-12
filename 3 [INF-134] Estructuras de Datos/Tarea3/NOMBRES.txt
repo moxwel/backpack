@@ -3,7 +3,7 @@ Nombres
 ==========
 
 Maximiliano Sepúlveda
-ROL      : #########-#
+
 Paralelo : 201
 
 Problema 1 : Plan de accion
@@ -14,7 +14,7 @@ Problema 1 : Plan de accion
 ==========
 
 Cristopher Fuentes
-ROL      : #########-#
+
 Paralelo : 201
 
 Problema 1 : Funcion de hashing
@@ -25,7 +25,7 @@ Problema 1 : Funcion de hashing
 ==========
 
 Giuliana Zanetti
-ROL      : #########-#
+
 Paralelo : 202
 
 Problema 1 : Apoyo moral

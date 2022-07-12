@@ -3,7 +3,7 @@ Nombres
 ==========
 
 Maximiliano Sepúlveda
-ROL      : #########-#
+
 Paralelo : 201
 
 Problema 1 : Funcion para transformar un archivo a un arreglo.
@@ -17,7 +17,7 @@ Problema 2 : Funcion para generar clientes.
 ==========
 
 Cristopher Fuentes
-ROL      : #########-#
+
 Paralelo : 201
 
 Problema 1 : Idea general de solucion (TODO.txt).
@@ -30,7 +30,7 @@ Problema 2 : Funcion para leer transacciones.
 ==========
 
 Giuliana Zanetti
-ROL      : #########-#
+
 Paralelo : 202
 
 Problema 1 : Funcion principal 'buscar_str'.
