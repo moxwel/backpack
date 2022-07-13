@@ -1,4 +1,4 @@
-# backpack
+# 🎒 backpack
 
 Un repositorio lleno de las cosas que hago para la uni y *tal vez* volverme un ingeniero informatico.
 
