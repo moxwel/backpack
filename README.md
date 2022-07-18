@@ -52,5 +52,5 @@ Aquí hay una lista de programas que he utilizado hasta ahora.
   * [PostgreSQL](https://www.postgresql.org/) *Base de datos relacional moderno.*
 
 * Etc:
-  * [JFLAP](https://github.com/moxwel/utfsm-backpack/tree/main/%5BINF-155%5D%20Informatica%20Teorica/JFLAP) *Crea automatas y maquinas de Turing.*
+  * [JFLAP](https://github.com/moxwel/backpack/tree/main/5%20%5BINF-155%5D%20Informatica%20Teorica/JFLAP) *Crea automatas y maquinas de Turing.*
   * [Diagrams.net](https://app.diagrams.net/) *Crea diagramas online.*
