@@ -1,12 +1,12 @@
-# 🎒 backpack
+# <p align="center"> 🎒 backpack </p>
 
 Un repositorio lleno de las cosas que hago para la uni y *tal vez* volverme un ingeniero informatico.
 
-Si estudias en la **Universidad Técnica Federico Santa Maria** puede que estos archivos sirvan de algo.
+Si estudias en la **Universidad Técnica Federico Santa Maria** puede que estos archivos te sirvan de algo.
 
-> Vease [Malla Interactiva Informatica USM](https://mallas.labcomp.cl/).
+Véase [Malla Interactiva Informatica USM](https://mallas.labcomp.cl/).
 
-> ⚠ ADVERTENCIA: Las tareas y trabajos publicados aquí **no necesariamente tuvieron nota maxima.** El fin de este repositorio es ser un archivo historico, no una referencia de tareas perfectas.
+> ⚠ **ADVERTENCIA** ⚠ <br> Las tareas y trabajos publicados aquí **no necesariamente tuvieron nota maxima.** El fin de este repositorio es ser un archivo historico, no una referencia de tareas perfectas.
 
 ## Repositorios relacionados
 
