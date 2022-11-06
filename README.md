@@ -2,19 +2,11 @@
 
 Un repositorio lleno de las cosas que hice en la uni.
 
-Si estudias en la **Universidad Técnica Federico Santa Maria** puede que estos archivos te sirvan.
+Si estudias en la **USM** puede que estos archivos te sirvan.
 
 Véase [Malla Interactiva Informatica USM](https://mallas.labcomp.cl/).
 
-> ⚠ **ADVERTENCIA** ⚠ <br> Las tareas y trabajos publicados aquí **no necesariamente tuvieron nota máxima.** El fin de este repositorio es ser un archivo historico, no una referencia de tareas perfectas.
-
-## Repositorios relacionados
-
-Algunas carpetas poseen links a repositorios externos relacionados.
-
-* [basics](https://github.com/moxwel/basics)
-* [[IWI-131] utfsm-smoj](https://github.com/moxwel/utfsm-smoj)
-* [[IWG-101] csm](https://github.com/moxwel/csm)
+> ⚠ **ADVERTENCIA**<br>Las tareas y trabajos publicados aquí **no necesariamente tuvieron nota máxima.** El fin de este repositorio es ser un archivo histórico, no una referencia de tareas perfectas.
 
 ## Software de utilidad
 
@@ -56,3 +48,13 @@ Aquí hay una lista de programas que he utilizado hasta ahora.
 * Etc:
   * [JFLAP](https://github.com/moxwel/backpack/tree/main/5%20%5BINF-155%5D%20Informatica%20Teorica/JFLAP) *Crea automatas y maquinas de Turing.*
   * [Diagrams.net](https://app.diagrams.net/) *Crea diagramas online.*
+
+---
+
+## Repositorios relacionados
+
+Algunas carpetas poseen links a repositorios externos relacionados.
+
+* [basics](https://github.com/moxwel/basics)
+* [[IWI-131] utfsm-smoj](https://github.com/moxwel/utfsm-smoj)
+* [[IWG-101] csm](https://github.com/moxwel/csm)
