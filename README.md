@@ -38,12 +38,17 @@ Aquí hay una lista de programas que he utilizado hasta ahora.
 
 * Desarrollo web:
   * [XAMPP](https://www.apachefriends.org/es/index.html) *Servidor, base de datos, y utilidades para desarrollo web.*
+  * [Node.js](https://nodejs.org/en/) *Interprete de Javascript de lado del servidor.*
+  * [Express](https://expressjs.com/) *Framework de Node.js para desarrollo de servidor y paginas web.*
+  * [React](https://reactjs.org/) *~~Framework~~ libreria de Node.js para crear interfaces gráficas.*
 
 * Bases de datos:
   * [StarUML](https://staruml.io/) *Editor de diagramas UML.*
   * [Oracle Database 18c XE](https://www.oracle.com/database/technologies/xe18c-downloads.html) *Base de datos de Oracle.*
   * [SQL Developer](https://www.oracle.com/tools/downloads/sqldev-downloads.html) *Front-end para administrar bases de datos de Oracle.*
   * [PostgreSQL](https://www.postgresql.org/) *Base de datos relacional moderno.*
+  * [MongoDB](https://www.mongodb.com/) *Base de datos documental NoSQL.*
+  * [Postman](https://www.postman.com/) *Progrma para gestionar y probar peticiones HTTP y APIs.*
 
 * Etc:
   * [JFLAP](https://github.com/moxwel/backpack/tree/main/5%20%5BINF-155%5D%20Informatica%20Teorica/JFLAP) *Crea automatas y maquinas de Turing.*
