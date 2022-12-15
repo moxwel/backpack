@@ -38,8 +38,9 @@ Aquí hay una lista de programas que he utilizado hasta ahora.
 
 * Desarrollo web:
   * [XAMPP](https://www.apachefriends.org/es/index.html) *Servidor, base de datos, y utilidades para desarrollo web.*
+  * [PHP](https://www.php.net/) *Servidor de paginas web dinamicas.*
   * [Node.js](https://nodejs.org/en/) *Interprete de Javascript de lado del servidor.*
-  * [Express](https://expressjs.com/) *Framework de Node.js para desarrollo de servidor y paginas web.*
+  * [Express](https://expressjs.com/) *Framework de Node.js para desarrollo de servidor y rutas web.*
   * [React](https://reactjs.org/) *~~Framework~~ libreria de Node.js para crear interfaces gráficas.*
 
 * Bases de datos:
