@@ -1,3 +1,9 @@
+# Información del trabajo
+
+Este trabajo consistió en una aplicacion que permite acceder a datos de sensores a traves de una API.
+
+---
+
 # Integrantes
 
 * Maximiliano Sepúlveda
