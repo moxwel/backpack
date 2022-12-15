@@ -1,4 +1,13 @@
 ==========
+INFORMACION DEL TRABAJO
+==========
+
+Este trabajo consistió en una pagina web de una tienda online, permitiendo gestionar cuentas de usuario, productos y ventas a traves de un modelo CRUD sobre una base de datos relacional SQL utilizando PHP como motor de servidor.
+
+
+
+
+==========
 README TAREA 2 PARTE 2 BASES DE DATOS
 ==========
 
