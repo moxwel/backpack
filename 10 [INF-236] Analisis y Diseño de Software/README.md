@@ -28,3 +28,13 @@ $ npm run start
 ```
 
 El servidor estará alojado en `localhost:3000`.
+
+## Utilizando Docker
+
+En la raíz del proyecto:
+
+```
+$ docker build -t adsw .
+
+$ docker run -p 3000:3000 --name adsw_node_server adsw
+```
