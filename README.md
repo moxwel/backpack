@@ -6,9 +6,13 @@ Si estudias en la **USM** puede que estos archivos te sirvan.
 
 Véase [Malla Interactiva Informatica USM](https://mallas.labcomp.cl/).
 
-> ⚠ **ADVERTENCIA**<br>Las tareas y trabajos publicados aquí **no necesariamente tuvieron nota máxima.** El fin de este repositorio es ser un archivo histórico, no una referencia de tareas perfectas.
+## ⚠ ADVERTENCIA ⚠
 
-## Software de utilidad
+Las tareas y trabajos publicados aquí **no necesariamente tuvieron nota máxima.**
+El fin de este repositorio es ser un archivo histórico, no una referencia de
+tareas perfectas.
+
+# Software de utilidad
 
 Aquí hay una lista de programas que he utilizado hasta ahora.
 
@@ -63,9 +67,7 @@ Aquí hay una lista de programas que he utilizado hasta ahora.
   * [Logisim](https://github.com/moxwel/backpack/tree/main/11%20%5BINF-245%5D%20Arquitectura%20de%20Computadores/Logisim) *Simulador de circuitos digitales.*
   * [qtarmsim](https://pypi.org/project/qtarmsim/) *Compilador para ARM Assembly.*
 
----
-
-## Repositorios relacionados
+# Repositorios relacionados
 
 Algunas carpetas poseen links a repositorios externos relacionados.
 
