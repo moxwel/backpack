@@ -65,3 +65,4 @@ Algunas carpetas poseen links a repositorios externos relacionados.
 * [[IWI-131] smoj](https://github.com/moxwel/utfsm-smoj)
 * [[IWG-101] csm](https://github.com/moxwel/csm)
 * [[INF-236] adsw](https://github.com/moxwel/utfsm-adsw)
+* [[INF-255] ingsw](https://github.com/moxwel/utfsm-ingsw)
