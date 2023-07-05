@@ -62,5 +62,5 @@ Aquí hay una lista de programas que he utilizado hasta ahora.
 Algunas carpetas poseen links a repositorios externos relacionados.
 
 * [basics](https://github.com/moxwel/basics)
-* [[IWI-131] utfsm-smoj](https://github.com/moxwel/utfsm-smoj)
+* [[IWI-131] smoj](https://github.com/moxwel/utfsm-smoj)
 * [[IWG-101] csm](https://github.com/moxwel/csm)
