@@ -5,6 +5,8 @@ Este programa es un simulador de circuitos digitales.
 Se usó para la tarea de circuitos digitales del ramo de Arquitectura
 de Computadores de la Universidad Tecnica Federico Santa Maria.
 
+Pagina oficial: http://www.cburch.com/logisim/
+
 # Uso
 
 Es necesario tener Java instalado para poder ejecutarlo. [Descarga la version
