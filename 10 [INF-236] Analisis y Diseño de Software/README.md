@@ -1,40 +1,5 @@
-# Información del trabajo
+# Proyecto de ADSW
 
-Este trabajo consistió en una aplicacion que permite acceder a datos de sensores a traves de una API.
+ℹ Los archivos se han movido a un repositorio externo.
 
----
-
-# Integrantes
-
-* Maximiliano Sepúlveda
-* Natalia Acevedo
-* Felipe Mellado
-* **Tutor**: Matías Vargas
-
-## Instrucciones
-
-> Usar **Node v16.18.0** para la ejecución de la aplicación.
-
-Para instalar los modulos necesarios, ejecutar en el root del repositorio:
-```
-$ npm install
-```
-
-Se creará una carpeta `node_modules`.
-
-Para abrir servidor:
-```
-$ npm run start
-```
-
-El servidor estará alojado en `localhost:3000`.
-
-## Utilizando Docker
-
-En la raíz del proyecto:
-
-```
-$ docker build -t adsw .
-
-$ docker run -p 3000:3000 --name adsw_node_server adsw
-```
+* [[INF-236] adsw](https://github.com/moxwel/utfsm-adsw)
