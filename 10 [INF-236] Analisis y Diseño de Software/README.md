@@ -1,4 +1,4 @@
-# Proyecto de ADSW
+# Proyecto de Análisis y Diseño de Software
 
 ℹ Los archivos se han movido a un repositorio externo.
 
