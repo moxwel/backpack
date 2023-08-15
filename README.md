@@ -62,7 +62,7 @@ Aquí hay una lista de programas que he utilizado hasta ahora.
   * [Thunder Client](https://www.thunderclient.com/) *Alternativa a Postman para VSCode.*
 
 * Etc:
-  * [JFLAP](https://github.com/moxwel/backpack/tree/main/5%20%5BINF-155%5D%20Informatica%20Teorica/JFLAP) *Crea automatas y maquinas de Turing.*
+  * [JFLAP](https://github.com/moxwel/backpack/tree/main/05%20%5BINF-155%5D%20Informatica%20Teorica/JFLAP) *Crea automatas y maquinas de Turing.*
   * [Diagrams.net](https://app.diagrams.net/) *Crea diagramas online.*
   * [Logisim](https://github.com/moxwel/backpack/tree/main/11%20%5BINF-245%5D%20Arquitectura%20de%20Computadores/Logisim) *Simulador de circuitos digitales.*
   * [qtarmsim](https://pypi.org/project/qtarmsim/) *Compilador para ARM Assembly.*
