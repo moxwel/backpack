@@ -1,0 +1,95 @@
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname Router
+!
+!
+!
+!
+!
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+!
+license udi pid CISCO1941/K9 sn FTX1524QRPZ-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ bandwidth 1544
+ ip address 12.50.0.1 255.254.0.0
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Serial0/1/0
+ bandwidth 1544
+ ip address 4.0.0.2 255.0.0.0
+!
+interface Serial0/1/1
+ bandwidth 1544
+ ip address 5.0.0.1 255.0.0.0
+ clock rate 2000000
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router bgp 1
+ bgp log-neighbor-changes
+ no synchronization
+ neighbor 5.0.0.2 remote-as 2
+ neighbor 4.0.0.1 remote-as 3
+ network 12.50.0.0 mask 255.254.0.0
+ network 4.0.0.0 mask 255.0.0.0
+ network 5.0.0.0 mask 255.0.0.0
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+
