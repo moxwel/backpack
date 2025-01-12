@@ -1,0 +1,19 @@
+arbol_id,sector_id,arbol_tipo,arbol_nombCi,arbol_lon,arbol_lat
+85001,101,"Durazno","Prunus Persica",150,255
+85002,101,"Manzano","Malus Domestica",120,230
+85003,102,"Peral","Pyrus Communis",130,240
+85004,103,"Ciruelo","Prunus Domestica",140,250
+85005,104,"Cerezo","Prunus Avium",160,260
+85006,105,"Naranjo","Citrus Sinensis",170,270
+85007,101,"Ciruelo","Prunus Domestica",155,260
+85008,101,"Naranjo","Citrus Sinensis",125,235
+85009,102,"Manzano","Malus Domestica",135,245
+85010,103,"Peral","Pyrus Communis",145,255
+85011,104,"Durazno","Prunus Persica",165,265
+85012,105,"Cerezo","Prunus Avium",175,275
+85013,101,"Peral","Pyrus Communis",160,265
+85014,101,"Cerezo","Prunus Avium",130,240
+85015,102,"Durazno","Prunus Persica",140,250
+85016,103,"Naranjo","Citrus Sinensis",150,260
+85017,104,"Manzano","Malus Domestica",170,270
+85018,105,"Ciruelo","Prunus Domestica",180,280

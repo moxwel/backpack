@@ -1,0 +1,60 @@
+services:
+  nodo1:
+    image: cassandra:latest
+    container_name: nodo1
+    ports:
+      - "7001:9042"
+    environment:
+      CASSANDRA_CLUSTER_NAME: "UniversiaCluster"
+      CASSANDRA_DC: "DC1"
+      CASSANDRA_RACK: "RAC1"
+      CASSANDRA_SEEDS: "nodo1"
+    volumes:
+      - ./postulaciones.xlsx:/postulaciones.xlsx
+    deploy:
+      resources:
+        limits:
+          memory: 3g
+          cpus: "1"
+    networks:
+      - cassandra-network
+
+  nodo2:
+    image: cassandra:latest
+    container_name: nodo2
+    ports:
+      - "7002:9042"
+    environment:
+      CASSANDRA_CLUSTER_NAME: "UniversiaCluster"
+      CASSANDRA_DC: "DC1"
+      CASSANDRA_RACK: "RAC1"
+      CASSANDRA_SEEDS: "nodo1" 
+    deploy:
+      resources:
+        limits:
+          memory: 3g
+          cpus: "1"
+    networks:
+      - cassandra-network
+
+  nodo3:
+    image: cassandra:latest
+    container_name: nodo3
+    ports:
+      - "7003:9042"
+    environment:
+      CASSANDRA_CLUSTER_NAME: "UniversiaCluster"
+      CASSANDRA_DC: "DC1"
+      CASSANDRA_RACK: "RAC1"
+      CASSANDRA_SEEDS: "nodo1"  
+    deploy:
+      resources:
+        limits:
+          memory: 3g
+          cpus: "1"
+    networks:
+      - cassandra-network
+
+networks:
+  cassandra-network:
+    driver: bridge
