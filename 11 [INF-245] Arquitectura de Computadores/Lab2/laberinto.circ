@@ -225,7 +225,7 @@
     </comp>
     <comp loc="(300,290)" name="Sig Estado"/>
     <comp lib="6" loc="(252,561)" name="Text">
-      <a name="text" val="Cristopher Fuentes 201973598-5"/>
+      <a name="text" val="Cristopher Fuentes"/>
     </comp>
     <comp loc="(850,140)" name="Logica Salida"/>
     <comp lib="6" loc="(231,369)" name="Text">
@@ -370,7 +370,7 @@
       <a name="text" val="Segun estado"/>
     </comp>
     <comp lib="6" loc="(251,545)" name="Text">
-      <a name="text" val="Maximiliano Sepúlveda 201973536-5"/>
+      <a name="text" val="Maximiliano Sepúlveda"/>
     </comp>
     <comp lib="6" loc="(264,70)" name="Text">
       <a name="text" val="SE PUEDEN INGRESAR ENTRADAS"/>
