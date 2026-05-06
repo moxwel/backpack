@@ -2,7 +2,7 @@
 
 Un repositorio lleno de las cosas que hice en la uni.
 
-Si estudias en la **USM** puede que estos archivos te sirvan.
+Si estudias en la **Universidad Técnica Federico Santa María** puede que estos archivos te sirvan.
 
 Véase [Malla Interactiva Informatica USM](https://mallas.labcomp.cl/).
 
@@ -31,8 +31,11 @@ Aquí hay una lista de programas que he utilizado hasta ahora.
   * [LazyDocker](https://github.com/jesseduffield/lazydocker) *Interfaz de línea de comandos para gestionar Docker.*
   * [Kubernetes](https://kubernetes.io/) *Orquestador de contenedores para despliegue y gestion de aplicaciones en la nube.*
   * [Minikube](https://minikube.sigs.k8s.io/docs/start/) *Entorno local para ejecutar Kubernetes.*
+  * [Kind](https://kind.sigs.k8s.io/) *'Kubernetes in Docker' para ejecutar Kubernetes dentro de contenedores Docker.*
   * [Lens](https://lenshq.io/) *IDE para gestionar clústeres de Kubernetes.*
   * [k9s](https://k9scli.io/) *Interfaz de línea de comandos para gestionar Kubernetes.*
+  * [Grafana](https://grafana.com/) *Plataforma de analisis y visualizacion de datos para monitoreo de sistemas.*
+  * [Loki](https://grafana.com/oss/loki/) *Sistema de registro de logs para Kubernetes y aplicaciones distribuidas.*
 
 * Lenguajes:
   * [Python](https://www.python.org/downloads/) *Interprete de Python.*
@@ -84,10 +87,16 @@ Aquí hay una lista de programas que he utilizado hasta ahora.
 
 ## Repositorios relacionados
 
-Algunas carpetas poseen links a repositorios externos relacionados.
+Algunas carpetas poseen links a repositorios externos relacionados:
 
 * [basics](https://github.com/moxwel/basics)
-* [[IWI-131] smoj](https://github.com/moxwel/utfsm-smoj)
-* [[IWG-101] csm](https://github.com/moxwel/csm)
-* [[INF-236] adsw](https://github.com/moxwel/utfsm-adsw)
-* [[INF-255] ingsw](https://github.com/moxwel/utfsm-ingsw)
+* [utfsm-smoj](https://github.com/moxwel/utfsm-smoj) — Programación ([IWI-131])
+* [utfsm-csm](https://github.com/moxwel/utfsm-csm) — Introducción a Ingeniería ([IWG-101])
+* [utfsm-adsw](https://github.com/moxwel/utfsm-adsw) — Análisis y Diseño de Software ([INF-236])
+* [utfsm-ingsw](https://github.com/moxwel/utfsm-ingsw) — Ingeniería de Software ([INF-225])
+* [utfsm-diu](https://github.com/moxwel/utfsm-diu) — Diseño de Interfaces ([INF-322])
+* [utfsm-arquisw-tareafinal](https://github.com/moxwel/utfsm-arquisw-tareafinal) — Arquitectura de Software ([INF-314])
+* [utfsm-arquisw-tareafinal-gateway](https://github.com/PipeM113/utfsm-arquisw-tareafinal-gateway) — Arquitectura de Software ([INF-314])
+* [utfsm-arquisw-tareafinal-front](https://github.com/moxwel/utfsm-arquisw-tareafinal-front) — Arquitectura de Software ([INF-314])
+* [Implementaciones de EDD](https://github.com/moxwel/basics/tree/master/C/11-edd/5-reimplementation) — Estructuras de Datos ([INF-134])
+* [Apuntes de LaTeX](https://github.com/moxwel/basics/tree/master/LaTeX) — Estructuras Discretas ([INF-152])
