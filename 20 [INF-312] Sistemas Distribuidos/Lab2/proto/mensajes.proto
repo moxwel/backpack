@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package pokemon;
+option go_package = "mensajes/PokemonProto";
+
+import "tipos.proto";
+
+service ServicioLCP{
+    rpc ObtenerTorneos(Empty) returns (ListaTorneos);
+    rpc ObtenerTorneosRegion(RegionString) returns (ListaTorneos);
+    rpc InscribirEnTorneo(InscripcionTorneo) returns (CodigoRespuesta);
+    rpc RegistrarEntrenador(Entrenador) returns (CodigoRespuesta);
+    rpc ExisteEntrenador(EntrenadorID) returns (CodigoRespuesta);
+    rpc ObtenerEntrenador(EntrenadorID) returns (Entrenador);
+}
+
+service ServicioGym{
+    rpc AsignarCombate(CombateGym) returns (CodigoRespuesta);
+}

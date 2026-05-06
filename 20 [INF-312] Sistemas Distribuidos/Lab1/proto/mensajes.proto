@@ -1,0 +1,78 @@
+syntax = "proto3";
+
+package serviciomensajes;
+option go_package = "proto/mensajes/servicioMensajes";
+
+message Empty {
+}
+
+message Pirata {
+  int32 id = 1;
+  string nombre = 2;
+  int32 recompensa = 3;
+  string peligrosidad = 4;
+  string estado = 5;
+}
+
+message ListaPiratas {
+  repeated Pirata piratas = 1;
+}
+
+message NpiratasRestantes {
+  int32 cantidad = 1;
+}
+
+message EntregaRequest {
+  int32 balance = 1;
+  int32 reputacion = 2;
+  Pirata pirata = 3;
+}
+
+message EntregaResponse {
+  string estado = 1;
+  int32 pago = 2;
+}
+
+message ActualizarReputacionRequest {
+  int32 reputacion = 1;
+  int32 id_pirata = 2;
+  string estado = 3;
+  bool submundo = 4;
+}
+
+message BasicRequest {
+  string msg = 1;
+}
+
+message BasicResponse {
+  string msg = 1;
+}
+
+message ActualizarReputacionResponse {
+  int32 reputacion = 1;
+}
+
+message PirataCapturado {
+  int32 id_pirata = 1;
+}
+
+service GobiernoService {
+  rpc ObtenerListaPiratas(Empty) returns (ListaPiratas);
+  rpc ObtenerListaPiratasTodos(Empty) returns (ListaPiratas);
+  rpc ResultadoEntrega(ActualizarReputacionRequest)returns (ActualizarReputacionResponse);
+  rpc Basic(BasicRequest) returns (BasicResponse);
+  rpc ObtenerNpiratasRestantes(Empty) returns (NpiratasRestantes);
+  rpc MarcarCaptura(PirataCapturado) returns (Empty);
+}
+
+service MarinaService {
+  rpc EntregarPirata(EntregaRequest) returns (EntregaResponse);
+  rpc ActividadIlegal(Empty) returns (Empty);
+  rpc Basic(BasicRequest) returns (BasicResponse);
+}
+
+service SubMundoService {
+  rpc EntregarPirata(EntregaRequest) returns (EntregaResponse);
+  rpc ActivarRedadas(Empty) returns (Empty);
+  rpc Basic(BasicRequest) returns (BasicResponse);
+}

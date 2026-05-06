@@ -1,0 +1,184 @@
+syntax = "proto3";
+
+package matchmaking;
+option go_package = "mensajes/MatchmakingProto";
+
+enum PlayerStatus {
+    IDLE = 0;
+    IN_QUEUE = 1;
+    IN_MATCH = 2;
+    UNKNOWN = 3;
+}
+
+enum ServerStatus {
+    DISPONIBLE = 0; 
+    OCUPADO = 1;
+    CAIDO = 2;
+    DESCONOCIDO = 3;
+}
+
+message VectorClockEntry{
+    string serverId = 1;
+    int32 timestamp = 2; 
+}
+message VectorClock {
+    repeated VectorClockEntry entries = 1;
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// PLAYER -> MATCHMAKING SERVICE
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// SOLICITAR PARTIDA
+message PlayerInfoRequest{
+    string playerId = 1;
+    int32 modePreference = 2;
+    VectorClock vectorClock = 3;
+}
+
+message QueuePlayerResponse{
+    int32 statusCode = 1; 
+    string mensaje = 2;
+    VectorClock vectorClock = 3;
+}
+
+// SOLICITAR ESTADO
+message PlayerStatusRequest {
+    string playerId = 1;
+    VectorClock vectorClock = 2;
+}
+
+message PlayerStatusResponse{
+    PlayerStatus Status = 1; // IDLE, IN_QUEUE, IN_MATCH
+    string matchId = 2;
+    string serverAddress = 3;
+    VectorClock vectorClock = 4;
+}
+
+// CANCELAR COLA
+message CancelQueueRequest {
+    string playerId = 1;
+    VectorClock vectorClock = 2;
+}
+
+message CancelQueueResponse {
+    int32 statusCode = 1;
+    string message = 2;
+    VectorClock vectorClock = 3;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// MATCHMAKING SERVICE -> GAME SERVER
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// ASIGNAR PARTIDA
+message AssignMatchRequest{
+    string id = 1; 
+    string playerId1 = 2;
+    string playerId2 = 3;
+    VectorClock vectorClock = 4;
+}
+
+message AssignMatchResponse {
+    int32 statusCode = 1;
+    string message = 2;
+    VectorClock vectorClock = 3;
+}
+
+message PingServerRequest {
+    VectorClock vectorClock = 1;
+}
+
+message PingServerResponse {
+    int32 statusCode = 1;
+    string message = 2;
+    VectorClock vectorClock = 3;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// GAME SERVER -> MATCHMAKING SERVICE
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// ACTUALIZAR ESTADO DEL SERVIDOR
+message ServerStatusUpdateRequest{
+    string serverId = 1; 
+    ServerStatus newStatus = 2; 
+    string serverAddress = 3;
+    VectorClock vectorClock = 4;
+}
+
+message ServerStatusUpdateResponse {
+    int32 statusCode = 1;
+    string message = 2;
+    VectorClock vectorClock = 3;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// ADMIN -> MATCHMAKING SERVICE
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+message AdminRequest { 
+    VectorClock vectorClock = 1;
+}
+
+message ServerState{ 
+    string id = 1;
+    ServerStatus status = 2;
+    string address = 3;
+    string currentMatchId = 4;
+    VectorClock vectorClock = 5;
+}
+
+message PlayerQueueEntry {
+    string playerId = 1;
+    int32 timeInQueue = 2; // segundos
+    VectorClock vectorClock = 3;
+}
+
+message SystemStatusResponse {
+    repeated ServerState serverList = 1;
+    repeated PlayerQueueEntry playerQueue = 2;
+    VectorClock vectorClock = 3;
+}
+
+message AdminServerUpdateRequest {
+    string serverId = 1;
+    ServerStatus newStatus = 2;
+    VectorClock vectorClock = 3;
+}
+
+message AdminUpdateResponse {
+    int32 statusCode = 1;
+    string message = 2;
+    VectorClock vectorClock = 3;
+}
+
+// MATCHMAKER -> GAME SERVER: Actualizar estado del servidor
+message UpdateGameServerStateRequest {
+    string serverId = 1;
+    ServerStatus newStatus = 2;
+    VectorClock vectorClock = 3;
+}
+
+message UpdateGameServerStateResponse {
+    int32 statusCode = 1;
+    string message = 2;
+    VectorClock vectorClock = 3;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// PLAYER -> GAME SERVER
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// SOLICITAR RESULTADO DE PARTIDA
+message GetMatchResultRequest {
+    string matchId = 1;
+    VectorClock vectorClock = 2;
+}
+
+message GetMatchResultResponse {
+    int32 statusCode = 1;
+    string message = 2;
+    string winnerId = 3;
+    string loserId = 4;
+    VectorClock vectorClock = 5;
+}

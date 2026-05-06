@@ -1,0 +1,118 @@
+networks:
+  l3:
+    driver: bridge
+
+services:
+  matchmaker:
+    container_name: matchmaker
+    build:
+      context: .
+      dockerfile: matchmaker/Dockerfile
+    ports:
+      - "50051:50051"
+    environment:
+      - IP=0.0.0.0
+      - PORT=50051
+      - ID=matchmaker
+    networks:
+      - l3
+
+  gameserver1:
+    container_name: gameserver1
+    build:
+      context: .
+      dockerfile: servidor/Dockerfile
+    ports:
+      - "50001:50001" 
+    environment:
+      - IP=0.0.0.0
+      - PORT=50001
+      - SERVERID=gameserver1
+      - MATCH_IP=10.35.168.84 
+      - MATCH_PORT=50051
+      - REAL_IP=10.35.168.83
+    depends_on:
+      - matchmaker
+    networks:
+      - l3
+
+  gameserver2:
+    container_name: gameserver2
+    build:
+      context: .
+      dockerfile: servidor/Dockerfile
+    ports:
+      - "50002:50002"
+    environment:
+      - IP=0.0.0.0
+      - PORT=50002
+      - SERVERID=gameserver2
+      - MATCH_IP=10.35.168.84
+      - MATCH_PORT=50051
+      - REAL_IP=10.35.168.83
+    depends_on:
+      - matchmaker
+    networks:
+      - l3
+
+  gameserver3:
+    container_name: gameserver3
+    build:
+      context: .
+      dockerfile: servidor/Dockerfile
+    ports:
+      - "50003:50003" 
+    environment:
+      - IP=0.0.0.0
+      - PORT=50003
+      - SERVERID=gameserver3
+      - MATCH_IP=10.35.168.84
+      - MATCH_PORT=50051
+      - REAL_IP=10.35.168.83
+    depends_on:
+      - matchmaker
+    networks:
+      - l3
+
+  player_client1:
+    container_name: player_client1
+    build:
+      context: .
+      dockerfile: jugador/Dockerfile
+    environment:
+      - ID=player1
+      - MATCH_IP=10.35.168.84
+      - MATCH_PORT=50051
+    depends_on:
+      - matchmaker
+    networks:
+      - l3
+
+
+  player_client2:
+    container_name: player_client2
+    build:
+      context: .
+      dockerfile: jugador/Dockerfile
+    environment:
+      - ID=player2
+      - MATCH_IP=10.35.168.84
+      - MATCH_PORT=50051
+    depends_on:
+      - matchmaker
+    networks:
+      - l3
+
+  admin_client:
+    container_name: admin_client
+    build:
+      context: .
+      dockerfile: admin/Dockerfile
+    environment:
+      - ID=admin
+      - MATCH_IP=10.35.168.84
+      - MATCH_PORT=50051
+    depends_on:
+      - matchmaker
+    networks:
+      - l3

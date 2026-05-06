@@ -1,0 +1,51 @@
+services:
+    submun:
+        build: ./submun
+        container_name: submun
+        ports:
+            - "50051:50051"
+        environment:
+            - IP_ADDR=0.0.0.0
+            - PORT_NUMBR=50051
+    marine:
+        build: ./marine
+        container_name: marine
+        ports:
+            - "50052:50052"
+        environment:
+            - IP_ADDR=0.0.0.0
+            - PORT_NUMBR=50052
+
+            - GOB_IP_ADDR=gobmun
+            - GOB_PORT_NUMBR=50053
+
+            - SUB_IP_ADDR=submun
+            - SUB_PORT_NUMBR=50051
+    gobmun:
+        build: ./gobmun
+        container_name: gobmun
+        ports:
+            - "50053:50053"
+        environment:
+            - IP_ADDR=0.0.0.0
+            - PORT_NUMBR=50053
+
+            - MAR_IP_ADDR=marine
+            - MAR_PORT_NUMBR=50052
+
+            - PIRATAS_FILE=piratas_grande.csv
+    
+    cazarec:
+        build: ./cazarec
+        container_name: cazarec
+        environment:
+            - SUB_IP_ADDR=submun
+            - SUB_PORT_NUMBR=50051
+
+            - MAR_IP_ADDR=marine
+            - MAR_PORT_NUMBR=50052
+
+            - GOB_IP_ADDR=gobmun
+            - GOB_PORT_NUMBR=50053
+
+            - ITER_NUMBR=10

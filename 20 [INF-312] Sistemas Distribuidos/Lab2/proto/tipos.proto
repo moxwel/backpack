@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+package pokemon;
+option go_package = "mensajes/PokemonProto";
+
+enum EstadoEntrenador{
+    ENTRENADOR_ACTIVO = 0;
+    ENTRENADOR_INACTIVO = 1;
+    ENTRENADOR_SUSPENDIDO = 2;
+}
+
+enum EstadoTorneo{
+    TORNEO_ACTIVO = 0;
+    TORNEO_PENDIENTE = 1;
+    TORNEO_FINALIZADO = 2;
+}
+
+message Entrenador { // LCP Inscripcion Entrenador
+    string id = 1;
+    string nombre = 2;
+    string region = 3;
+    int32 ranking = 4;
+    EstadoEntrenador estado = 5;
+    int32 suspencion = 6; //permanente
+}
+
+message CombateGym { //Gym Asignar Combate
+    string id = 1;
+    Entrenador entrenador_1 = 2;
+    Entrenador entrenador_2 = 3;
+    string region = 4;
+}
+
+message CodigoRespuesta{
+    int32 codigo = 1; // Codigo de resultado 0 si fue exitoso
+    string mensaje = 2; // Añadir mensaje para el cliente
+}
+
+message Torneo{ //LCP Obtener Torneos
+    string id = 1;
+    string region = 2;
+    EstadoTorneo estado = 3;
+}
+
+message ListaTorneos{ //LCP Obtener Torneos 
+    repeated Torneo torneos = 1;
+}
+
+message RegionString { //LCP Obtener Torneos Por Region
+    string region = 1;
+}
+
+message InscripcionTorneo{
+    string entrenador_id = 1;
+    string torneo_id = 2;
+}
+
+message EntrenadorID{
+    string id = 1;
+}
+
+message ListaEntrenadores{
+    repeated Entrenador entrenadores = 1;
+}
+
+message Empty { 
+}

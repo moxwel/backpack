@@ -1,0 +1,42 @@
+[
+    {
+        "id": "001",
+        "nombre": "Ash Ketchum",
+        "region": "Kanto",
+        "ranking": 1570,
+        "estado": "Activo",
+        "suspension": 0
+    },
+    {
+        "id": "002",
+        "nombre": "Misty",
+        "region": "Kanto",
+        "ranking": 1490,
+        "estado": "Expulsado",
+        "suspension": 0
+    },
+    {
+        "id": "003",
+        "nombre": "Brock",
+        "region": "Sinnoh",
+        "ranking": 1600,
+        "estado": "Activo",
+        "suspension": 0
+    },
+    {
+        "id": "004",
+        "nombre": "Gary Oak",
+        "region": "Kanto",
+        "ranking": 1700,
+        "estado": "Activo",
+        "suspension": 0
+    },
+    {
+        "id": "005",
+        "nombre": "Tracey Sketchit",
+        "region": "Johto",
+        "ranking": 1450,
+        "estado": "Activo",
+        "suspension": 0
+    }
+]

@@ -1,0 +1,24 @@
+syntax="proto3";
+
+package matchmaking;
+import "tipos.proto";
+option go_package = "mensajes/MatchmakingProto";
+
+//servicio de Matchmaking
+
+service MatchmakingService {    
+    rpc QueuePlayer (PlayerInfoRequest) returns (QueuePlayerResponse);
+    rpc GetPlayerStatus (PlayerStatusRequest) returns (PlayerStatusResponse);
+    rpc CancelQueue (CancelQueueRequest) returns (CancelQueueResponse);
+    rpc UpdateServerStatus (ServerStatusUpdateRequest) returns (ServerStatusUpdateResponse);
+    rpc AdminGetSystemStatus(AdminRequest) returns (SystemStatusResponse);
+    rpc AdminUpdateServerState(AdminServerUpdateRequest) returns (AdminUpdateResponse);
+}
+
+//servicio de Game Server
+service GameServerService {
+    rpc AssignMatch (AssignMatchRequest) returns (AssignMatchResponse);
+    rpc PingServer(PingServerRequest) returns (PingServerResponse);
+    rpc UpdateGameServerState(UpdateGameServerStateRequest) returns (UpdateGameServerStateResponse);
+    rpc GetMatchResult(GetMatchResultRequest) returns (GetMatchResultResponse);
+}

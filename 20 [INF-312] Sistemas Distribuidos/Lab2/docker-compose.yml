@@ -1,0 +1,105 @@
+services:
+    rabbitmq:
+        image: rabbitmq:4-management
+        container_name: rabbitmq
+        ports:
+            - "15672:15672"
+            - "5672:5672"
+        environment:
+            - RABBITMQ_DEFAULT_USER=guest
+            - RABBITMQ_DEFAULT_PASS=guest
+
+    entrenadores:
+        build:
+            context: .
+            dockerfile: entrenadores/Dockerfile
+        container_name: entrenadores
+        environment:
+            - LCP_IP=lcp
+            - LCP_PORT=50051
+
+            - RABBIT_IP=rabbitmq
+            - RABBIT_PORT=5672
+            - RABBIT_USER=guest
+            - RABBIT_PASS=guest
+        depends_on:
+            - lcp
+            - rabbitmq
+
+    snp:
+        build:
+            context: .
+            dockerfile: snp/Dockerfile
+        container_name: snp
+        environment:
+            - RABBIT_IP=rabbitmq
+            - RABBIT_PORT=5672
+            - RABBIT_USER=guest
+            - RABBIT_PASS=guest
+        depends_on:
+            - rabbitmq
+
+    lcp:
+        build:
+            context: .
+            dockerfile: lcp/Dockerfile
+        container_name: lcp
+        environment:
+            - IP=0.0.0.0
+            - PORT=50051
+
+            - GYM_IP=gym
+            - GYM_PORT=50052
+
+            - RABBIT_IP=rabbitmq
+            - RABBIT_PORT=5672
+            - RABBIT_USER=guest
+            - RABBIT_PASS=guest
+        ports:
+            - "50051:50051"
+        depends_on:
+            - gym
+            - rabbitmq
+
+    cdp:
+        build:
+            context: .
+            dockerfile: cdp/Dockerfile
+        container_name: cdp
+        environment:
+            - LCP_IP=lcp
+            - LCP_PORT=50051
+
+            - RABBIT_IP=rabbitmq
+            - RABBIT_PORT=5672
+            - RABBIT_USER=guest
+            - RABBIT_PASS=guest
+
+            - AES_KEY_KANTO=12345678901234567890123456789012
+            - AES_KEY_JOHTO=abcdefghijklmnopqrstuvwxzy123456
+            - AES_KEY_SINNOH=09876543210987654321098765432109
+        depends_on:
+            - lcp
+            - rabbitmq
+
+    gym:
+        build:
+            context: .
+            dockerfile: gym/Dockerfile
+        container_name: gym
+        environment:
+            - IP=0.0.0.0
+            - PORT=50052
+
+            - RABBIT_IP=rabbitmq
+            - RABBIT_PORT=5672
+            - RABBIT_USER=guest
+            - RABBIT_PASS=guest
+
+            - AES_KEY_KANTO=12345678901234567890123456789012
+            - AES_KEY_JOHTO=abcdefghijklmnopqrstuvwxzy123456
+            - AES_KEY_SINNOH=09876543210987654321098765432109
+        ports:
+            - "50052:50052"
+        depends_on:
+            - rabbitmq
