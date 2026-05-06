@@ -6,13 +6,10 @@ Si estudias en la **USM** puede que estos archivos te sirvan.
 
 Véase [Malla Interactiva Informatica USM](https://mallas.labcomp.cl/).
 
-## ⚠ ADVERTENCIA ⚠
+> [!WARNING]
+> Las tareas y trabajos publicados aquí **no necesariamente tuvieron nota máxima.** El fin de este repositorio es ser un archivo histórico, no una referencia de tareas perfectas.
 
-Las tareas y trabajos publicados aquí **no necesariamente tuvieron nota máxima.**
-El fin de este repositorio es ser un archivo histórico, no una referencia de
-tareas perfectas.
-
-# Software de utilidad
+## Software de utilidad
 
 Aquí hay una lista de programas que he utilizado hasta ahora.
 
@@ -21,14 +18,21 @@ Aquí hay una lista de programas que he utilizado hasta ahora.
   * [GWSL](https://opticos.github.io/gwsl/) *Manipular WSL con interfaz grafica.*
   * [Oh My Zsh](https://ohmyz.sh/#install) *Shell extensible para Linux.*
   * [Git](https://git-scm.com/) *Control de versiones.*
+  * [SSH](https://www.openssh.org/) *Protocolo de acceso remoto seguro.*
   * [GitHub Desktop](https://desktop.github.com/) *Administrador de repositorios de GitHub.*
-  * [VSCode](https://code.visualstudio.com/) *Editor de texto/codigo terriblemente OP.*
+  * [VSCode](https://code.visualstudio.com/) *Editor de texto/codigo terriblemente OP (ahora, con IA).*
+  * [Antigravity](https://antigravity.google/) *Igual que VSCode pero con IA de Google.*
   * [OnlineGDB](https://www.onlinegdb.com/) *Interprete, compilador y depurador online de C, Java, Python, etc.*
   * [Valgrind](https://valgrind.org/) *Detector de fugas de memoria (y mas).*
   * [Make (for Windows)](https://github.com/CarlosSiles67/Make_3.81) *Make para Windows (el de Linux es mejor).*
   * [Jupyter](https://jupyter.org/) *Cuadernos de código interactivo para investigación y estadistica.*
   * [IRkernel](https://irkernel.github.io/) *Kernel de R para Jupyter Notebook.*
   * [Docker](https://www.docker.com/) *Creacion y gestion de contenedores para desarrollo.*
+  * [LazyDocker](https://github.com/jesseduffield/lazydocker) *Interfaz de línea de comandos para gestionar Docker.*
+  * [Kubernetes](https://kubernetes.io/) *Orquestador de contenedores para despliegue y gestion de aplicaciones en la nube.*
+  * [Minikube](https://minikube.sigs.k8s.io/docs/start/) *Entorno local para ejecutar Kubernetes.*
+  * [Lens](https://lenshq.io/) *IDE para gestionar clústeres de Kubernetes.*
+  * [k9s](https://k9scli.io/) *Interfaz de línea de comandos para gestionar Kubernetes.*
 
 * Lenguajes:
   * [Python](https://www.python.org/downloads/) *Interprete de Python.*
@@ -38,6 +42,9 @@ Aquí hay una lista de programas que he utilizado hasta ahora.
   * [Racket](https://download.racket-lang.org/) *Conjunto de lenguajes funcionales (Scheme).*
   * [SWI-Prolog](https://www.swi-prolog.org/Download.html) *Implementacion de Prolog.*
   * [R](https://www.r-project.org/) *Lenguaje para estadistica y analisis de datos.*
+  * [JavaScript](https://www.javascript.com/) *Lenguaje de programacion interpretado para desarrollo web.*
+  * [TypeScript](https://www.typescriptlang.org/) *Superset de JavaScript con tipado estatico.*
+  * [Go](https://go.dev/) *Lenguaje de programación compilado y concurrente creadado por Google.*
 
 * LaTeX:
   * [MiKTeX](https://miktex.org/download) *LaTeX con plugins auto-instalables.*
@@ -51,6 +58,13 @@ Aquí hay una lista de programas que he utilizado hasta ahora.
   * [Node.js](https://nodejs.org/en/) *Interprete de Javascript de lado del servidor.*
   * [Express](https://expressjs.com/) *Framework de Node.js para desarrollo de servidor y rutas web.*
   * [React](https://reactjs.org/) *~~Framework~~ libreria de Node.js para crear interfaces gráficas.*
+  * [Next.js](https://nextjs.org/) *Framework de React para desarrollo de aplicaciones web completas.*
+  * [Expo](https://expo.dev/) *Framework de React para desarrollo de aplicaciones móviles multiplataforma.*
+  * [FastAPI](https://fastapi.tiangolo.com/) *Framework de Python para desarrollo de APIs REST.*
+  * [Cloudflare](https://www.cloudflare.com/) *Servicios de seguridad y rendimiento para sitios web.*
+  * [ZeroTier](https://www.zerotier.com/) *Redes virtuales privadas para conectar dispositivos de forma segura a través de Internet.*
+  * [Postman](https://www.postman.com/) *Progrma para gestionar y probar peticiones HTTP y APIs.*
+  * [Thunder Client](https://www.thunderclient.com/) *Alternativa a Postman para VSCode.*
 
 * Bases de datos:
   * [StarUML](https://staruml.io/) *Editor de diagramas UML.*
@@ -58,16 +72,17 @@ Aquí hay una lista de programas que he utilizado hasta ahora.
   * [SQL Developer](https://www.oracle.com/tools/downloads/sqldev-downloads.html) *Front-end para administrar bases de datos de Oracle.*
   * [PostgreSQL](https://www.postgresql.org/) *Base de datos relacional moderno.*
   * [MongoDB](https://www.mongodb.com/) *Base de datos documental NoSQL.*
-  * [Postman](https://www.postman.com/) *Progrma para gestionar y probar peticiones HTTP y APIs.*
-  * [Thunder Client](https://www.thunderclient.com/) *Alternativa a Postman para VSCode.*
+  * [Cassandra](https://cassandra.apache.org/) *Base de datos NoSQL distribuida y escalable.*
+  * [Neo4j](https://neo4j.com/) *Base de datos orientada a grafos.*
 
 * Etc:
   * [JFLAP](https://github.com/moxwel/backpack/tree/main/05%20%5BINF-155%5D%20Informatica%20Teorica/JFLAP) *Crea automatas y maquinas de Turing.*
+  * [Cisco Packet Tracer](https://www.netacad.com/courses/packet-tracer) *Simulador de redes de datos y telecomunicaciones.*
   * [Diagrams.net](https://app.diagrams.net/) *Crea diagramas online.*
   * [Logisim](https://github.com/moxwel/backpack/tree/main/11%20%5BINF-245%5D%20Arquitectura%20de%20Computadores/Logisim) *Simulador de circuitos digitales.*
   * [qtarmsim](https://pypi.org/project/qtarmsim/) *Compilador para ARM Assembly.*
 
-# Repositorios relacionados
+## Repositorios relacionados
 
 Algunas carpetas poseen links a repositorios externos relacionados.
 
