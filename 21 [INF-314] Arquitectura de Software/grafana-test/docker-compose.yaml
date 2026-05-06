@@ -1,0 +1,65 @@
+services:
+  servicio1:
+    build: ./miServicio
+    container_name: servicio1
+    ports:
+      - "8001:8000"
+    networks:
+      - tarea1-network
+    environment:
+      - NOMBRE_SERVICIO=Servicio 1
+
+  servicio2:
+    build: ./miServicio
+    container_name: servicio2
+    ports:
+      - "8002:8000"
+    networks:
+      - tarea1-network
+    environment:
+      - NOMBRE_SERVICIO=Servicio 2
+
+  servicio3:
+    build: ./miServicio
+    container_name: servicio3
+    ports:
+      - "8003:8000"
+    networks:
+      - tarea1-network
+    environment:
+      - NOMBRE_SERVICIO=Servicio 3
+
+  loki:
+    image: grafana/loki:2.9.0
+    container_name: loki
+    ports:
+      - "3100:3100"
+    command: -config.file=/etc/loki/local-config.yaml
+    networks:
+      - tarea1-network
+
+  promtail:
+    image: grafana/promtail:2.9.0
+    container_name: promtail
+    volumes:
+      - ./promtail-config.yaml:/etc/promtail/config.yml
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: -config.file=/etc/promtail/config.yml
+    networks:
+      - tarea1-network
+    depends_on:
+      - loki
+
+  grafana:
+    image: grafana/grafana:10.0.0
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    networks:
+      - tarea1-network
+    depends_on:
+      - loki
+
+networks:
+  tarea1-network:
+    driver: bridge
