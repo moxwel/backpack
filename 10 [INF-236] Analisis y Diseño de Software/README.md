@@ -1,5 +1,6 @@
-# Proyecto de Análisis y Diseño de Software
+# Análisis y Diseño de Software
 
-ℹ Los archivos se han movido a un repositorio externo.
+Los archivos del proyecto se encuentran en el siguiente repositorio:
 
-* [[INF-236] adsw](https://github.com/moxwel/utfsm-adsw)
+* [utfsm-adsw](https://github.com/moxwel/utfsm-adsw)\
+_Este trabajo consistió en una aplicacion que permite acceder a datos de sensores a traves de una API. La finalidad del trabajo era poder crear una interfaz de usuario para **visualizar y manipular datos externos al equipo de desarrollo.**_
