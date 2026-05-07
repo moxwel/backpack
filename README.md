@@ -24,6 +24,7 @@ Aquí hay una lista de programas que he utilizado hasta ahora.
   * [Antigravity](https://antigravity.google/) *Igual que VSCode pero con IA de Google.*
   * [OnlineGDB](https://www.onlinegdb.com/) *Interprete, compilador y depurador online de C, Java, Python, etc.*
   * [Valgrind](https://valgrind.org/) *Detector de fugas de memoria (y mas).*
+  * [GNU Make](https://www.gnu.org/software/make/) *Herramienta de automatización de compilaciones y tareas.*
   * [Make (for Windows)](https://github.com/CarlosSiles67/Make_3.81) *Make para Windows (el de Linux es mejor).*
   * [Jupyter](https://jupyter.org/) *Cuadernos de código interactivo para investigación y estadistica.*
   * [IRkernel](https://irkernel.github.io/) *Kernel de R para Jupyter Notebook.*
@@ -48,6 +49,8 @@ Aquí hay una lista de programas que he utilizado hasta ahora.
   * [JavaScript](https://www.javascript.com/) *Lenguaje de programacion interpretado para desarrollo web.*
   * [TypeScript](https://www.typescriptlang.org/) *Superset de JavaScript con tipado estatico.*
   * [Go](https://go.dev/) *Lenguaje de programación compilado y concurrente creadado por Google.*
+  * [Protobuf](https://developers.google.com/protocol-buffers) *Formato de serialización de datos.*
+  * [gRPC](https://grpc.io/) *Framework de RPC que utiliza Protobuf para definir servicios y generar stubs entre lenguajes.*
 
 * LaTeX:
   * [MiKTeX](https://miktex.org/download) *LaTeX con plugins auto-instalables.*
@@ -90,13 +93,13 @@ Aquí hay una lista de programas que he utilizado hasta ahora.
 Algunas carpetas poseen links a repositorios externos relacionados:
 
 * [basics](https://github.com/moxwel/basics)
-* [utfsm-smoj](https://github.com/moxwel/utfsm-smoj) — Programación ([IWI-131])
-* [utfsm-csm](https://github.com/moxwel/utfsm-csm) — Introducción a Ingeniería ([IWG-101])
-* [utfsm-adsw](https://github.com/moxwel/utfsm-adsw) — Análisis y Diseño de Software ([INF-236])
-* [utfsm-ingsw](https://github.com/moxwel/utfsm-ingsw) — Ingeniería de Software ([INF-225])
-* [utfsm-diu](https://github.com/moxwel/utfsm-diu) — Diseño de Interfaces ([INF-322])
-* [utfsm-arquisw-tareafinal](https://github.com/moxwel/utfsm-arquisw-tareafinal) — Arquitectura de Software ([INF-314])
-* [utfsm-arquisw-tareafinal-gateway](https://github.com/PipeM113/utfsm-arquisw-tareafinal-gateway) — Arquitectura de Software ([INF-314])
-* [utfsm-arquisw-tareafinal-front](https://github.com/moxwel/utfsm-arquisw-tareafinal-front) — Arquitectura de Software ([INF-314])
-* [Implementaciones de EDD](https://github.com/moxwel/basics/tree/master/C/11-edd/5-reimplementation) — Estructuras de Datos ([INF-134])
-* [Apuntes de LaTeX](https://github.com/moxwel/basics/tree/master/LaTeX) — Estructuras Discretas ([INF-152])
+* [utfsm-smoj](https://github.com/moxwel/utfsm-smoj) *Programación [IWI-131]*
+* [utfsm-csm](https://github.com/moxwel/utfsm-csm) *Introducción a Ingeniería [IWG-101]*
+* [utfsm-adsw](https://github.com/moxwel/utfsm-adsw) *Análisis y Diseño de Software [INF-236]*
+* [utfsm-ingsw](https://github.com/moxwel/utfsm-ingsw) *Ingeniería de Software [INF-225]*
+* [utfsm-diu](https://github.com/moxwel/utfsm-diu) *Diseño de Interfaces [INF-322]*
+* [utfsm-arquisw-tareafinal](https://github.com/moxwel/utfsm-arquisw-tareafinal) *Arquitectura de Software [INF-314]*
+* [utfsm-arquisw-tareafinal-gateway](https://github.com/PipeM113/utfsm-arquisw-tareafinal-gateway) *Arquitectura de Software [INF-314]*
+* [utfsm-arquisw-tareafinal-front](https://github.com/moxwel/utfsm-arquisw-tareafinal-front) *Arquitectura de Software [INF-314]*
+* [Implementaciones de EDD](https://github.com/moxwel/basics/tree/master/C/11-edd/5-reimplementation) *Estructuras de Datos [INF-134]*
+* [Apuntes de LaTeX](https://github.com/moxwel/basics/tree/master/LaTeX) *Estructuras Discretas [INF-152]*
