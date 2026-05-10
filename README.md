@@ -10,7 +10,7 @@ Véase [Malla Interactiva Informatica USM](https://mallas.labcomp.cl/).
 > [!WARNING]
 > Las tareas y trabajos publicados aquí **no necesariamente tuvieron nota máxima.** El fin de este repositorio es ser un archivo histórico, no una referencia de tareas perfectas.
 
-## 💻 Software, lenguajes y herramientas usados
+## 💻 Software, lenguajes y herramientas usadas
 
 Aquí hay una lista de programas que he utilizado hasta ahora.
 
